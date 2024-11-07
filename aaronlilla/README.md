@@ -1,76 +1,28 @@
-Personal Portfolio Site
+# Aaron Lilla's Portfolio
 
-This is the codebase for my personal portfolio website, which showcases my work, skills, and professional experiences. The site is built using modern web technologies and includes a responsive layout to ensure that it works well on both desktop and mobile devices.
+Welcome to my personal portfolio website, hosted on GitHub Pages! This portfolio showcases my skills as a front-end React developer, with projects that highlight my work in web development, responsive design, and dynamic user interfaces.
 
-Features
+## 🚀 Features
 
-Responsive Design: The portfolio is fully responsive, adapting to different screen sizes to ensure a great user experience on any device.
+- **Dynamic Route-Based Navigation**: Built with `react-router-dom` to allow for seamless route changes (e.g., `https://aaronlilla.github.io/about`). Routes update the `currentPage` in the Redux state, enabling navigation through the left-side dashboard menu and URL changes.
+- **Responsive Design**: Optimized for screen sizes below 1150px:
+  - Displays a condensed version of the logo and hides additional elements like social media icons and summary text.
+  - Switches to a hamburger menu that opens a full-screen animated navigation.
+  - Left column width adjusts to a streamlined 60px.
+- **Morphing Background Animation**: Utilizes JavaScript for smooth transitions between background images.
+- **EmailJS Integration**: Contact form powered by EmailJS for seamless email submissions.
 
-Interactive Navigation: The site includes a navigation bar that changes behavior based on the viewport width. For smaller screens, it features a hamburger menu.
+## 📁 Project Structure
 
-Portfolio Showcase: Includes a dedicated section to showcase various projects I've worked on, categorized for easy browsing.
+The code is organized with best practices in mind, making use of modular components, Redux for state management, and `react-router-dom` for client-side routing. Below is a brief overview of the file structure:
 
-Animated Gradient Headers: The title "AARON" features an animated gradient effect, adding a visual flair to the website.
 
-Technologies Used
+## 🛠️ Technologies Used
 
-React: The site is built using React for a modular, component-based architecture.
-
-Redux: State management is handled using Redux to maintain the UI state, including page navigation and hamburger menu visibility.
-
-React Router: For client-side routing, enabling smooth navigation between different sections of the site.
-
-Sass/SCSS: Styling is managed using SCSS for better modularity and maintainability.
-
-Getting Started
-
-To run the project locally, follow these steps:
-
-Clone the repository:
-
-git clone <repository-url>
-cd portfolio-website
-
-Install dependencies:
-
-npm install
-
-Run the development server:
-
-npm start
-
-The site will be available at http://localhost:3000.
-
-Project Structure
-
-src/components/Navigation.js: The main navigation bar, including a hamburger menu for smaller viewports.
-
-src/components/Menu.js: Contains the list of pages and sub-items for navigation.
-
-src/slices/navigationSlice.js: Redux slice for managing navigation state, including the current page, viewport dimensions, and hamburger menu.
-
-src/index.scss: Main SCSS file for styling.
-
-Key Components
-
-Navigation: The Navigation component manages the main menu, including the hamburger icon for smaller screens. The hamburger state is managed through Redux to maintain global control over its visibility.
-
-Menu: The Menu component provides links to different pages and sub-items within the portfolio.
-
-Responsive Behavior
-
-Hamburger Menu: The navigation bar includes a hamburger menu that appears when the viewport width is less than 1150px. Clicking an item or subitem will automatically close the menu.
-
-Condensed Branding: In compact mode, the site branding changes from "AARON LILLA" to just "A" to save space.
-
-Deployment
-
-The project can be deployed using GitHub Pages or any other static site hosting platform. For GitHub Pages, you can run:
-
-npm run build
-
-Then push the build folder to your repository's gh-pages branch.
-
-Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for new features, feel free to create a pull request or open an issue.
+- **React**: Front-end framework used to build reusable components.
+- **Redux**: Manages the global state, including the navigation state.
+- **react-router-dom**: Enables dynamic, client-side routing for smooth navigation.
+- **SCSS**: Styles the site with responsive design principles.
+- **JavaScript**: Powers animations and dynamic content, including the morphing background effect.
+- **EmailJS**: Configured for easy form submission in the contact section.
+- **GitHub Pages**: Hosts the site and allows for public accessibility.
