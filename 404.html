@@ -1,0 +1,16 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+        // Redirect to the main page with the pathname to handle route in SPA
+        const pathname = window.location.pathname;
+        window.location.replace(`/${pathname}#${pathname}`);
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

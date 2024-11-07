@@ -1,0 +1,29 @@
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h1 {
+        color: #e9a002;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 24px;
+        font-size: 64px;
+        font-weight: 200;
+        line-height: 42px;
+    }
+
+    .resume-content {
+        height: 100%;
+        width: 100%;
+        color: #8f8f8f;
+        font-size: 18px;
+        font-weight: 100;
+        overflow: hidden;
+        line-height: 28px;
+        p {
+            line-height: 28px;
+        }
+    }
+}

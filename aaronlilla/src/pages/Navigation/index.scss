@@ -1,0 +1,152 @@
+/* navigation.scss */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    max-width: 480px;
+    min-width: 480px;
+    height: 100%;
+    padding: 44px;
+    justify-content: space-between;
+  
+    @media (max-width: 1150px) {
+      width: 60px !important;
+      min-width: 60px !important;
+      max-width: 60px !important;
+      padding: 44px !important;
+    }
+
+    @media (max-width: 850px) {
+        padding: 20px !important;
+    }
+  
+    .navigation-header-title {
+      display: flex;
+      flex-direction: column;
+      line-height: 46px;
+  
+      .navigation-header-title-text {
+        font-size: 62px;
+        font-weight: 400;
+        color: #373838;
+  
+        // Gradient color animation for "AARON"
+        span {
+          background: linear-gradient(135deg, #00bfff, #3cfdbd 25%, #e9a002 50%, #e94002 100%);
+          background-size: 600%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: colorCycle 32s ease-in-out infinite;
+        }
+      }
+  
+      .navigation-header-subtitle {
+        font-size: 24px;
+        font-weight: 200;
+        color: #818181;
+      }
+    }
+  
+    .navigation-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+  
+      .navigation-menu-item {
+        cursor: pointer;
+        font-size: 24px;
+        display: inline-flex;
+        transition: color 0.1s ease, font-weight 0.1s ease;
+  
+        span {
+          display: inline-block;
+          transition: color 0.1s ease, font-weight 0.1s ease;
+        }
+  
+        &.active span {
+          color: #00bfff;
+          font-weight: 500;
+        }
+      }
+  
+      .portfolio-subitems {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        opacity: 0;
+        max-height: 0;
+        transform: translate(-10px, -10px);
+        overflow: hidden;
+        transition: opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease;
+        margin-top: -10px;
+  
+        &.visible {
+          opacity: 1;
+          max-height: 350px;
+          transform: translate(0, 0);
+        }
+  
+        .navigation-subitem {
+          cursor: pointer;
+          font-size: 20px;
+          padding-left: 12px;
+          display: inline-flex;
+          transition: color 0.1s ease, font-weight 0.1s ease, opacity 0.3s ease;
+  
+          span {
+            display: inline-block;
+            transition: color 0.1s ease, font-weight 0.1s ease;
+          }
+        }
+      }
+    }
+  
+    .navigation-summary {
+      font-size: 16px;
+      font-weight: 200;
+      color: #7c7c7c;
+      opacity: 1;
+      max-height: 200px;
+      overflow: hidden;
+      transition: opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease;
+  
+      &.fade-out {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease; 
+      }
+    }
+  
+    .navigation-socials {
+      display: flex;
+      justify-content: space-between;
+  
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        opacity: 0.3;
+        transition: opacity 0.1s ease;
+  
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  /* Keyframes for color cycling animation */
+  @keyframes colorCycle {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
