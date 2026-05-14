@@ -32,9 +32,9 @@ export function Hero() {
             <p className="text-2xl sm:text-3xl md:text-[2.1rem] leading-[1.25] text-crt-text text-pretty">
               Thirteen years shipping React, TypeScript, Node, and Electron.
               Lead engineer on <em className="not-italic crt-bloom-amber">TableCaptain</em>
-              {' '}— deployed in 30+ poker rooms across the U.S. and Asia.
-              Shipped <em className="not-italic crt-bloom-amber">Spire of Ash</em> on Steam.
-              Currently building <em className="not-italic crt-bloom-amber">Holoscene</em>{' '}
+              {' '}— 30+ poker rooms, 450+ concurrent in-venue displays over a
+              single WebSocket fabric. Shipped <em className="not-italic crt-bloom-amber">Spire of Ash</em>{' '}
+              on Steam. Currently building <em className="not-italic crt-bloom-amber">Holoscene</em>{' '}
               with an AI-integrated tooling pipeline.
             </p>
 

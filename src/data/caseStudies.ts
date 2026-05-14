@@ -13,16 +13,16 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: 'tablecaptain-realtime',
-    title: 'Real-time across 30+ venues, 15+ screens, and zero downtime',
+    title: 'Real-time across 450+ displays, 30+ venues, six years no major outages',
     tagline: "How TableCaptain keeps a casino's floor, waitlist, and in-venue TVs in lockstep.",
     context:
-      "TableCaptain runs 24/7 in 30+ poker rooms across the U.S. and Asia. Every venue has a Windows back-office desktop, a fleet of 15+ in-venue TVs showing live waitlist and table status to players, and floor managers walking around updating state from tablets. All of it has to stay in sync, sub-second, even when one of those screens has flaky Wi-Fi.",
+      "TableCaptain runs 24/7 in 30+ poker rooms across the U.S. and Asia. Every venue has a Windows back-office desktop, 15+ in-venue TVs showing live waitlist and table status to players, and floor managers walking around updating state from tablets — 450+ concurrent displays across the fleet. All of it has to stay in sync, sub-second, even when one of those screens has flaky Wi-Fi.",
     problem:
       "Real-time multi-screen sync is hard. Network conditions vary across venues — wired in some rooms, marginal Wi-Fi behind the bar in others. Auto-updates can't take a poker room offline; a live waitlist display going dark mid-tournament is a real, customer-visible failure. And the back-office app, the staff tablets, and the TV displays all need to converge on the same truth without the staff ever thinking about state.",
     solution:
       "Built a React + Electron client architecture sitting on a long-lived WebSocket connection to a .NET backend. State is Redux on the client, with optimistic updates on staff actions and reconciliation on confirmation. The TV display app is the same Electron bundle running in a kiosk mode — same state shape, same reducers, same code path. Auto-update flows through a custom Electron updater with staged rollout and rollback so a bad build never reaches all venues at once. Bi-weekly releases became the norm; hotfixes go out in under 10 minutes.",
     outcome:
-      "TableCaptain V2 became the #1 poker room management system by adoption in 2024. The same architecture absorbed feature additions — floor editor, table manager, employee manager, dealer rotation — without restructuring the sync layer. Six years of production with sub-second sync as a baseline. Video walkthroughs on this site demo each surface.",
+      "TableCaptain V2 reached a market-leading adoption position in 2024. The same architecture absorbed feature additions — floor editor, table manager, employee manager, dealer rotation — without restructuring the sync layer. Six years of production with sub-second sync as a baseline; zero major downtime incidents. Video walkthroughs on this site demo each surface.",
     stack: ['React', 'Redux', 'Electron', 'WebSockets', '.NET (integration)', 'Webpack', 'CI/CD', 'Figma'],
   },
   {

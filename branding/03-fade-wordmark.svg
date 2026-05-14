@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="Afterimage Studio">
+  <title>Afterimage Studio — Fade Wordmark</title>
+
+  <defs>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ece3c8" stop-opacity="1.0"/>
+      <stop offset="55%"  stop-color="#ece3c8" stop-opacity="0.95"/>
+      <stop offset="80%"  stop-color="#ece3c8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ece3c8" stop-opacity="0.08"/>
+    </linearGradient>
+    <style><![CDATA[
+      .bg     { fill: #030406; }
+      .word   { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+                font-weight: 700; font-size: 104px; letter-spacing: -0.03em;
+                fill: url(#fade); }
+      .sub    { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+                font-weight: 600; font-size: 18px; letter-spacing: 0.34em;
+                fill: #ece3c8; opacity: 0.80; }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="800" height="280"/>
+
+  <!-- Wordmark fades toward the right — like an afterimage decaying -->
+  <text class="word" x="56" y="156">Afterimage</text>
+  <text class="sub" x="60" y="200">STUDIO</text>
+</svg>

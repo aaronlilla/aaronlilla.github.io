@@ -40,43 +40,79 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Aaron Lilla",
-        "url": "https://aaronlilla.github.io",
-        "image": "https://aaronlilla.github.io/favicon.svg",
-        "jobTitle": "Full-Stack Software Engineer",
-        "description": "Full-stack software engineer with 13 years of experience in React, TypeScript, Node.js, and Electron. Lead engineer on TableCaptain. Shipped Spire of Ash on Steam.",
-        "email": "mailto:aaronjlilla@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Las Vegas",
-          "addressRegion": "NV",
-          "addressCountry": "US"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "College of Southern Nevada"
-        },
-        "knowsAbout": [
-          "React",
-          "TypeScript",
-          "JavaScript",
-          "Node.js",
-          "Electron",
-          "Redux",
-          "WebSockets",
-          "PostgreSQL",
-          "Tailwind CSS",
-          "Next.js",
-          "Claude API",
-          "Model Context Protocol",
-          "Unity",
-          "C#"
-        ],
-        "sameAs": [
-          "https://github.com/aaronlilla",
-          "https://www.linkedin.com/in/aaronlilla",
-          "https://store.steampowered.com/app/4450160/Spire_of_Ash/"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://aaronlilla.github.io/#aaron",
+            "name": "Aaron Lilla",
+            "url": "https://aaronlilla.github.io",
+            "image": "https://aaronlilla.github.io/favicon.svg",
+            "jobTitle": "Full-Stack Software Engineer",
+            "description": "Full-stack software engineer with 13 years of experience in React, TypeScript, Node.js, and Electron. Lead engineer on TableCaptain. Founder of Afterimage Studio (Spire of Ash on Steam; Holoscene in development).",
+            "email": "mailto:aaronjlilla@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Las Vegas",
+              "addressRegion": "NV",
+              "addressCountry": "US"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "College of Southern Nevada"
+            },
+            "knowsAbout": [
+              "React",
+              "TypeScript",
+              "JavaScript",
+              "Node.js",
+              "Electron",
+              "Redux",
+              "WebSockets",
+              "PostgreSQL",
+              "Tailwind CSS",
+              "Next.js",
+              "Claude API",
+              "Model Context Protocol",
+              "Unity",
+              "C#"
+            ],
+            "worksFor": { "@id": "https://aaronlilla.github.io/#afterimage" },
+            "founder": { "@id": "https://aaronlilla.github.io/#afterimage" },
+            "sameAs": [
+              "https://github.com/aaronlilla",
+              "https://www.linkedin.com/in/aaronlilla"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://aaronlilla.github.io/#afterimage",
+            "name": "Afterimage Studio",
+            "alternateName": "Afterimage",
+            "url": "https://aaronlilla.github.io",
+            "founder": { "@id": "https://aaronlilla.github.io/#aaron" },
+            "foundingDate": "2022",
+            "foundingLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Las Vegas",
+                "addressRegion": "NV",
+                "addressCountry": "US"
+              }
+            },
+            "description": "Indie game studio founded by Aaron Lilla. Shipped Spire of Ash on Steam (2024); currently building Holoscene.",
+            "knowsAbout": [
+              "Game Development",
+              "Unity",
+              "C#",
+              "TypeScript",
+              "Deterministic Simulation",
+              "Model Context Protocol"
+            ],
+            "sameAs": [
+              "https://store.steampowered.com/app/4450160/Spire_of_Ash/"
+            ]
+          }
         ]
       }
     </script>

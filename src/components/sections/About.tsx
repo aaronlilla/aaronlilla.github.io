@@ -16,11 +16,13 @@ export function About() {
             For six years I led front-end engineering on{' '}
             <span className="crt-bloom-amber">TableCaptain</span>, a React +
             Electron platform deployed in <strong>30+ poker rooms</strong>{' '}
-            across the U.S. and Asia. Real-time TV displays, dealer rotation,
+            across the U.S. and Asia — orchestrating <strong>450+ concurrent
+            in-venue displays</strong> over a single WebSocket fabric with
+            sub-second latency. Real-time TV displays, dealer rotation,
             waitlist, an Electron auto-updater shipping hotfixes in under ten
             minutes — owned the codebase, the design system, and the release
-            pipeline. In 2024 it became the #1 poker room management system
-            by adoption.
+            pipeline. By 2024 it reached a market-leading adoption position
+            for casino-floor management.
           </p>
           <p>
             On the side I ship games under{' '}

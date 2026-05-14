@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="Afterimage Studio">
+  <title>Afterimage Studio — Echo Wordmark</title>
+
+  <defs>
+    <style><![CDATA[
+      .bg     { fill: #030406; }
+      .word   { font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+                font-weight: 600; font-size: 96px; letter-spacing: -0.025em;
+                fill: #ece3c8; }
+      .echo-1 { fill: #ece3c8; opacity: 0.20; }
+      .echo-2 { fill: #ece3c8; opacity: 0.08; }
+      .sub    { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+                font-weight: 600; font-size: 18px; letter-spacing: 0.34em;
+                fill: #ece3c8; }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="800" height="280"/>
+
+  <!-- Three layers: faintest ghost, soft echo, sharp wordmark -->
+  <text class="word echo-2" x="64" y="156" dx="14">Afterimage</text>
+  <text class="word echo-1" x="62" y="153" dx="7">Afterimage</text>
+  <text class="word"        x="60" y="150">Afterimage</text>
+
+  <!-- subtitle -->
+  <text class="sub" x="62" y="200">STUDIO</text>
+</svg>

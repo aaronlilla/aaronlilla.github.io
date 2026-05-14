@@ -7,12 +7,13 @@ export const projects: Project[] = [
     stack: ['React', 'Redux', 'Electron', 'WebSockets', '.NET (integration)', 'Webpack', 'CI/CD'],
     year: '2019 — 2025',
     description:
-      'React + Electron poker room management platform at PokerAtlas. Live in 30+ poker rooms across the U.S. and Asia, with a real-time WebSocket TV display system driving 15+ synchronized screens per venue. Owned core front-end features end-to-end: floor editor, waitlist, table manager, employee manager, dealer rotation, and an auto-update pipeline that ships hotfixes in under 10 minutes.',
+      'React + Electron poker room management platform at PokerAtlas. Live in 30+ poker rooms across the U.S. and Asia, orchestrating 450+ concurrent in-venue displays (15+ per venue × 30+ venues) over a single WebSocket fabric with sub-second update latency. Owned core front-end features end-to-end: floor editor, waitlist, table manager, employee manager, dealer rotation, and an auto-update pipeline that ships hotfixes in under 10 minutes.',
     outcomes: [
-      'Scaled the product to the #1 poker room management system by adoption in 2024.',
-      'Built bi-weekly release pipeline with Electron auto-updater + CI/CD; hotfixes deployable in under 10 minutes.',
-      'Translated Figma mockups into pixel-perfect, responsive React components and reusable primitives.',
-      'Integrated with a .NET backend over WebSockets for sub-second synchronization across 15+ in-venue displays.',
+      'Scaled the product to a market-leading position by adoption in 2024, serving 30+ active poker rooms.',
+      'Architected the real-time WebSocket sync layer: 450+ concurrent displays with sub-second latency across variable venue network conditions.',
+      'Built bi-weekly release pipeline with Electron auto-updater + CI/CD (staged rollout + rollback); hotfixes deployable in under 10 minutes; zero major downtime incidents in 6 years.',
+      'Led TypeScript + Redux migration, code review, and mentoring practices across the team.',
+      'Translated Figma mockups into pixel-perfect, responsive React components and reusable design-system primitives.',
     ],
     videos: [
       { id: 'spwbp0cndwo', label: 'Floor Editor — drag-and-drop layout' },
@@ -31,9 +32,10 @@ export const projects: Project[] = [
     description:
       'In-development ARPG built on a 48K-LOC deterministic combat engine. The combat math has a locked TypeScript reference spec; a C# port is gated by a Monte Carlo parity validator that rejects builds with >0.5% divergence across 1,000 seeds. A custom MCP (Model Context Protocol) tool suite exposes the headless combat sim to Claude, collapsing balance-iteration cycles to single commands.',
     outcomes: [
-      'Deterministic combat sim — seeded RNG, no global state, bit-identical TS↔C# damage pipeline.',
-      'Built a multi-agent build pipeline: 7+ specialized Claude Code agents (combat runtime, balance validator, data exporter, etc.) ship coordinated changes against a frozen invariant surface.',
-      'Engineered an APL (Ability Priority Language) evaluator and a 36-mechanic dispatch system supporting cross-character passive synergies.',
+      'Deterministic combat sim — seeded RNG, no global state, bit-identical TS↔C# damage pipeline across ~48,000 LOC C#.',
+      'Multi-agent build pipeline: 7+ specialized Claude Code agents shipping coordinated changes across 6 game modes with no merge conflicts to date.',
+      'APL (Ability Priority Language) evaluator + 36-mechanic dispatch system supporting 36 hero archetypes and 14 aura patterns with deterministic per-tick resolution.',
+      'TS→Unity data pipeline: versioned ScriptableObject + JSON sidecars from one TS source of truth, eliminating data-shape drift.',
     ],
   },
   {

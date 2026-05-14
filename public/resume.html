@@ -252,7 +252,7 @@
   <section>
     <h2>Summary</h2>
     <p class="summary">
-      Full-stack software engineer with <strong>13 years of web development experience</strong> and 8+ years deep in modern JavaScript. Lead front-end engineer on <strong>TableCaptain</strong> — a React + Electron platform deployed in <strong>30+ poker rooms</strong> across the U.S. and Asia. Founder of <strong>Afterimage Studio</strong>, with <strong>Spire of Ash</strong> shipped on Steam and Holoscene in development. Fluent with AI-assisted development and MCP-based agent tooling — multi-agent build pipelines, deterministic TS↔C# parity validation, and Claude-integrated balance simulators.
+      Full-stack software engineer with <strong>13 years of web development experience</strong> and 8+ years deep in modern JavaScript. Lead front-end engineer on <strong>TableCaptain</strong> — a React + Electron platform deployed in <strong>30+ poker rooms</strong> across the U.S. and Asia, orchestrating <strong>450+ concurrent in-venue displays</strong> over a single WebSocket fabric. Founder of <strong>Afterimage Studio</strong>, with <strong>Spire of Ash</strong> shipped on Steam and Holoscene in development. Production AI-tooling experience: multi-agent build pipelines, MCP-based agent integration, deterministic TS↔C# parity validation across ~48K LOC.
     </p>
   </section>
 
@@ -269,10 +269,10 @@
       </div>
       <p class="role-summary">Building an indie game studio end-to-end. Engine, runtime, content pipeline, custom tooling, and an MCP-integrated balance simulator that lets AI agents prototype and validate changes in-process.</p>
       <ul class="bullets">
-        <li>Architected a deterministic combat engine in C# with a TypeScript reference spec; Monte Carlo parity gate rejects drift above 0.5% across 1,000 seeds.</li>
-        <li>Designed a multi-agent build pipeline with 7+ specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, etc.) coordinating against a frozen invariant surface.</li>
-        <li>Engineered an Ability Priority Language (APL) evaluator and a 36-mechanic dispatch system supporting cross-character passive synergies.</li>
-        <li>Built a TypeScript-to-Unity data pipeline that exports versioned ScriptableObject .asset files plus JSON sidecars from a single TS source of truth.</li>
+        <li>Architected a deterministic combat engine in C# (<strong>~48,000 LOC</strong>) with a TypeScript reference spec; Monte Carlo parity gate rejects drift above 0.5% across 1,000 seeds.</li>
+        <li>Designed a multi-agent build pipeline coordinating 7+ specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, cross-mode validator) shipping coordinated changes across 6 game modes against a frozen invariant contract — no merge conflicts to date.</li>
+        <li>Engineered an Ability Priority Language (APL) evaluator and a 36-mechanic dispatch system supporting <strong>36 hero archetypes</strong> with <strong>14 aura patterns</strong>, resolving cross-character passive synergies deterministically per simulation tick.</li>
+        <li>Built a TypeScript-to-Unity data pipeline that exports versioned ScriptableObject .asset files plus JSON sidecars from a single TS source of truth — eliminating data-shape drift between studio and engine.</li>
       </ul>
       <p class="stack"><span class="stack-label">Stack</span>Unity · C# · TypeScript · Node.js · MCP · Claude API · PlayFab · Addressables</p>
     </div>
@@ -285,16 +285,16 @@
         </div>
         <span class="role-period">2019 — 2025 · Las Vegas (Hybrid)</span>
       </div>
-      <p class="role-summary">Led front-end development of TableCaptain — a React + Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia. <strong>Video walkthroughs of Floor Editor, Table Manager, Waitlist, Auto Updater, and the in-venue TV display: <a href="https://aaronlilla.github.io/#work">aaronlilla.github.io</a>.</strong></p>
+      <p class="role-summary">Led front-end development of TableCaptain — a React + Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia, orchestrating <strong>450+ concurrent in-venue displays</strong> over a single WebSocket fabric. <strong>Video walkthroughs of Floor Editor, Table Manager, Waitlist, Auto Updater, and the in-venue TV display: <a href="https://aaronlilla.github.io/#work">aaronlilla.github.io</a>.</strong></p>
       <ul class="bullets">
-        <li>Scaled TableCaptain V2 into the <strong>#1 poker room management system by adoption</strong> in 2024.</li>
-        <li>Built a real-time WebSocket TV display platform: 15+ synchronized screens per venue, sub-second update latency.</li>
-        <li>Engineered core features end-to-end: floor editor, table manager, waitlist, employee manager, and a real-time in-venue display HUD with optimistic UI updates.</li>
-        <li>Automated Electron auto-update + CI/CD pipeline; bi-weekly releases with hotfixes deployable in under 10 minutes.</li>
-        <li>Integrated with a .NET backend over WebSockets for sub-second synchronization across 15+ in-venue displays.</li>
-        <li>Translated Figma mockups into pixel-perfect, responsive React components and reusable primitives.</li>
+        <li>Scaled TableCaptain V2 to a <strong>market-leading position by adoption</strong> in 2024 (per company assessment), serving 30+ active poker rooms.</li>
+        <li>Architected the real-time WebSocket sync layer: <strong>450+ concurrent displays</strong> (15+ per venue × 30+ venues) with sub-second update latency across variable venue network conditions.</li>
+        <li>Engineered core features end-to-end: floor editor, table manager, waitlist, employee manager, and a real-time in-venue display HUD with optimistic UI and server-confirmed reconciliation.</li>
+        <li>Automated Electron auto-update + CI/CD pipeline with staged rollout and rollback; bi-weekly releases, hotfixes in under 10 minutes — <strong>zero major downtime incidents across 6 years</strong> of production.</li>
+        <li>Led TypeScript + Redux migration; mentored junior engineers and introduced code-review practices adopted across the team.</li>
+        <li>Translated Figma mockups into pixel-perfect, responsive React components and reusable design-system primitives.</li>
       </ul>
-      <p class="stack"><span class="stack-label">Stack</span>React · Redux · Electron · WebSockets · .NET (integration) · Webpack · CI/CD · Figma</p>
+      <p class="stack"><span class="stack-label">Stack</span>React · Redux · Electron · WebSockets · .NET (integration) · Webpack · CI/CD · Figma · Agile</p>
     </div>
 
     <div class="role">
@@ -324,7 +324,7 @@
       </div>
       <p class="role-summary">Built a single-page React app delivering real-time commercial real estate data for 5,000+ properties.</p>
       <ul class="bullets">
-        <li>Cut quote retrieval time by 50% via Redux-driven caching and request deduplication.</li>
+        <li>Cut quote retrieval time by 50% via Redux-driven caching, request deduplication, and database query optimization on the search path.</li>
         <li>Shipped a 20-component reusable library, dropping front-end bug rate by ~40% in 6 months.</li>
         <li>Drove load time under 1.2s; lifted Core Web Vitals into the green and improved organic search ranking.</li>
       </ul>
@@ -339,7 +339,7 @@
         </div>
         <span class="role-period">2012 — Present · Remote</span>
       </div>
-      <p class="role-summary">Long-running freelance practice alongside salaried roles — landing pages, custom dashboards, Discord bots, and small SaaS tools.</p>
+      <p class="role-summary">Freelance practice concurrent with salaried roles — landing pages, custom dashboards, Discord bots, and small SaaS tools.</p>
     </div>
   </section>
 
@@ -378,16 +378,19 @@
       <dd>TypeScript · JavaScript (ES2024) · Node.js · C# (.NET) · HTML5 · CSS3</dd>
 
       <dt>Frontend</dt>
-      <dd>React · Redux · Tailwind CSS · Vite · Next.js · Design Systems · Accessibility (WCAG)</dd>
+      <dd>React · Redux · Tailwind CSS · Vite · Design Systems · Accessibility (WCAG) · Figma → React</dd>
 
       <dt>Backend</dt>
-      <dd>Node.js · REST APIs · WebSockets · PostgreSQL · SQLite · Auth &amp; Sessions</dd>
+      <dd>Node.js · REST APIs · WebSockets · PostgreSQL · SQLite · Schema Design · Auth &amp; Sessions</dd>
 
-      <dt>Desktop</dt>
-      <dd>Electron (IPC, preload, auto-update, native subprocess) · Real-time sync</dd>
+      <dt>Desktop &amp; Real-time</dt>
+      <dd>Electron (IPC, preload, auto-update) · Real-time sync · Optimistic UI + reconciliation</dd>
+
+      <dt>Architecture &amp; Practice</dt>
+      <dd>System Design · Scalable Architecture · Code Review · Mentoring · Agile / Scrum</dd>
 
       <dt>AI / Tooling</dt>
-      <dd>Claude API · MCP (Model Context Protocol) · Multi-agent pipelines · LLM streaming · Prompt engineering</dd>
+      <dd>Claude API · MCP (Model Context Protocol) · Multi-agent pipelines · LLM streaming · Prompt engineering · AI-assisted development</dd>
 
       <dt>Testing / DevOps</dt>
       <dd>Playwright · Vitest · Jest · CI/CD · Visual regression · Performance profiling · Git</dd>
@@ -396,7 +399,7 @@
 
   <section>
     <h2>Education</h2>
-    <p class="education">College of Southern Nevada — Organic Chemistry coursework</p>
+    <p class="education">College of Southern Nevada, Las Vegas, NV</p>
   </section>
 </main>
 
