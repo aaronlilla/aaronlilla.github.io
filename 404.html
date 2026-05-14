@@ -1,16 +1,25 @@
-<!-- 404.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Page Not Found</title>
-    <script type="text/javascript">
-        // Redirect to the main page with the pathname to handle route in SPA
-        const pathname = window.location.pathname;
-        window.location.replace(`/${pathname}#${pathname}`);
-    </script>
-</head>
-<body>
-    <p>Redirecting...</p>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=/" />
+    <title>Aaron Lilla — Redirecting</title>
+    <link rel="canonical" href="https://aaronlilla.github.io/" />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        background: #030406;
+        color: #ece3c8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      a { color: #ece3c8; }
+    </style>
+  </head>
+  <body>
+    <p>Page not found — <a href="/">return to aaronlilla.github.io</a>.</p>
+  </body>
 </html>

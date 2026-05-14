@@ -1,0 +1,95 @@
+# Aaron Lilla
+
+**Full-Stack Software Engineer** — React, TypeScript, Node.js, Electron
+
+Las Vegas, NV (Remote) · [aaronjlilla@gmail.com](mailto:aaronjlilla@gmail.com) · [aaronlilla.github.io](https://aaronlilla.github.io) · [github.com/aaronlilla](https://github.com/aaronlilla) · [linkedin.com/in/aaronlilla](https://www.linkedin.com/in/aaronlilla)
+
+---
+
+## Summary
+
+Full-stack software engineer with **13 years of web development experience** and 8+ years deep in modern JavaScript. Lead front-end engineer on **TableCaptain**, a React + Electron platform deployed in **30+ poker rooms** across the U.S. and Asia. Founder of **Afterimage Studio**, with **Spire of Ash** shipped on Steam and Holoscene in development. Fluent with AI-assisted development and MCP-based agent tooling — multi-agent build pipelines, deterministic TS↔C# parity validation, and Claude-integrated balance simulators.
+
+---
+
+## Experience
+
+### Founder · Lead Engineer — Afterimage Studio (Holoscene, in development)
+**2025 — Present** · Remote
+
+Building an indie game studio end-to-end. Engine, runtime, content pipeline, custom tooling, and an MCP-integrated balance simulator that lets AI agents prototype and validate changes in-process.
+
+- Architected a deterministic combat engine in C# with a TypeScript reference spec; Monte Carlo parity gate rejects drift above 0.5% across 1,000 seeds.
+- Designed a multi-agent build pipeline with 7+ specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, etc.) coordinating against a frozen invariant surface.
+- Engineered an Ability Priority Language (APL) evaluator and a 36-mechanic dispatch system supporting cross-character passive synergies.
+- Built a TypeScript-to-Unity data pipeline that exports versioned ScriptableObject `.asset` files plus JSON sidecars from a single TS source of truth.
+
+**Stack:** Unity · C# · TypeScript · Node.js · MCP · Claude API · PlayFab · Addressables
+
+### Frontend Engineer — PokerAtlas (TableCaptain)
+**2019 — 2025** · Las Vegas, NV (Hybrid)
+
+Led front-end development of TableCaptain — a React + Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia. **Video walkthroughs of Floor Editor, Table Manager, Waitlist, Auto Updater, and the in-venue TV display: [aaronlilla.github.io](https://aaronlilla.github.io/#work).**
+
+- Scaled TableCaptain V2 into the **#1 poker room management system by adoption** in 2024.
+- Built a real-time WebSocket TV display platform: 15+ synchronized screens per venue, sub-second update latency.
+- Engineered core features end-to-end: floor editor, table manager, waitlist, employee manager, and a real-time in-venue display HUD with optimistic UI updates.
+- Automated Electron auto-update + CI/CD pipeline; bi-weekly releases with hotfixes deployable in under 10 minutes.
+- Integrated with a .NET backend over WebSockets for sub-second synchronization across 15+ in-venue displays.
+- Translated Figma mockups into pixel-perfect, responsive React components and reusable primitives.
+
+**Stack:** React · Redux · Electron · WebSockets · .NET (integration) · Webpack · CI/CD · Figma
+
+### Founder · Lead Engineer — Afterimage Studio (Spire of Ash, shipped on Steam)
+**2022 — 2024** · Remote
+
+Shipped a roguelike ARPG on Steam end-to-end — engine, content tooling, loot math, and the build pipeline.
+
+- Self-shipped on [Steam](https://store.steampowered.com/app/4450160/Spire_of_Ash/) — full production cycle from prototype to publish.
+- Built the procedural affix generator and audit scripts that gate item rolls against design tolerances.
+- Patterns proven here became the foundation of the Holoscene engine and tooling.
+
+**Stack:** Unity · C# · TypeScript · Node.js · Steam
+
+### Frontend Developer — USCRE Online
+**2017 — 2019** · Las Vegas, NV (Hybrid)
+
+Built a single-page React app delivering real-time commercial real estate data for 5,000+ properties.
+
+- Cut quote retrieval time by 50% via Redux-driven caching and request deduplication.
+- Shipped a 20-component reusable library, dropping front-end bug rate by ~40% in 6 months.
+- Drove load time under 1.2s; lifted Core Web Vitals into the green and improved organic search ranking.
+
+**Stack:** React · Redux · JavaScript · HTML5 · CSS3
+
+### Freelance Web Developer — Self-Employed
+**2012 — Present** · Remote
+
+Long-running freelance practice alongside salaried roles — landing pages, custom dashboards, Discord bots, and small SaaS tools.
+
+---
+
+## Notable Side Projects
+
+**Clippa** *(Electron · MCP · ffmpeg)* — Local-first Electron app that detects highlight moments in long-form video. Multi-stage media pipeline on a SQLite-backed job queue. Exposes a dual-transport MCP server (HTTP + stdio, bearer-token auth) so external agents can drive the entire workflow programmatically.
+
+**FiveStack** *(React · Node.js · Raider.io API)* — Mythic+ team-building platform with AI-assisted matchmaking. [github.com/aaronlilla/FiveStack](https://github.com/aaronlilla/FiveStack)
+
+**Discord AI Chatbot** *(Node.js · discord.js · streaming LLM)* — Discord bot that streams LLM responses token-by-token in real time. [github.com/aaronlilla/discord-ai-chatbot](https://github.com/aaronlilla/discord-ai-chatbot)
+
+---
+
+## Skills
+
+- **Languages:** TypeScript, JavaScript (ES2024), Node.js, C# (.NET), HTML5, CSS3
+- **Frontend:** React, Redux, Tailwind CSS, Vite, Next.js, Design Systems, Accessibility (WCAG)
+- **Backend:** Node.js, REST APIs, WebSockets, PostgreSQL, SQLite, Auth & Sessions
+- **Desktop:** Electron (IPC, preload, auto-update, native subprocess), Real-time sync
+- **AI / Tooling:** Claude API, MCP (Model Context Protocol), Multi-agent pipelines, LLM streaming, Prompt engineering
+- **Testing / DevOps:** Playwright, Vitest, Jest, CI/CD, Visual regression, Performance profiling, Git
+
+---
+
+## Education
+
+**College of Southern Nevada** — Organic Chemistry coursework

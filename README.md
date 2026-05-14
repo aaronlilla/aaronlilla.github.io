@@ -1,28 +1,84 @@
-# Aaron Lilla's Portfolio
+# aaronlilla.github.io
 
-Welcome to my personal portfolio website, hosted on GitHub Pages! This portfolio showcases my skills as a front-end React developer, with projects that highlight my work in web development, responsive design, and dynamic user interfaces.
+Aaron Lilla's portfolio — full-stack software engineer. Live at **<https://aaronlilla.github.io>**.
 
-## 🚀 Features
+Vite + React + TypeScript + Tailwind, single-page anchored layout, CRT/broadcast aesthetic. Deployed to GitHub Pages via GitHub Actions on every push to `main`.
 
-- **Dynamic Route-Based Navigation**: Built with `react-router-dom` to allow for seamless route changes (e.g., `https://aaronlilla.github.io/about`). Routes update the `currentPage` in the Redux state, enabling navigation through the left-side dashboard menu and URL changes.
-- **Responsive Design**: Optimized for screen sizes below 1150px:
-  - Displays a condensed version of the logo and hides additional elements like social media icons and summary text.
-  - Switches to a hamburger menu that opens a full-screen animated navigation.
-  - Left column width adjusts to a streamlined 60px.
-- **Morphing Background Animation**: Utilizes JavaScript for smooth transitions between background images.
-- **EmailJS Integration**: Contact form powered by EmailJS for seamless email submissions.
+## Local development
 
-## 📁 Project Structure
+```bash
+npm install
+npm run dev        # dev server at http://localhost:5173
+npm run build      # production build into dist/
+npm run typecheck  # TS check, no emit
+npm run visual     # Playwright visual regression at 5 viewports
+```
 
-The code is organized with best practices in mind, making use of modular components, Redux for state management, and `react-router-dom` for client-side routing. Below is a brief overview of the file structure:
+## Deployment
 
+Pushed to `main` → built by GitHub Actions (`.github/workflows/deploy.yml`) → deployed to GitHub Pages.
 
-## 🛠️ Technologies Used
+**One-time setup** (after the first push):
 
-- **React**: Front-end framework used to build reusable components.
-- **Redux**: Manages the global state, including the navigation state.
-- **react-router-dom**: Enables dynamic, client-side routing for smooth navigation.
-- **SCSS**: Styles the site with responsive design principles.
-- **JavaScript**: Powers animations and dynamic content, including the morphing background effect.
-- **EmailJS**: Configured for easy form submission in the contact section.
-- **GitHub Pages**: Hosts the site and allows for public accessibility.
+1. Go to **Settings → Pages**.
+2. Source: **GitHub Actions** (not "Deploy from a branch").
+3. The workflow runs; first deploy takes ~90 seconds.
+
+## Structure
+
+```
+.
+├── index.html                  # Vite entry
+├── src/
+│   ├── App.tsx                 # Section composition (Hero → Contact)
+│   ├── data/                   # All site content lives here as TS data
+│   │   ├── projects.ts
+│   │   ├── experience.ts
+│   │   ├── caseStudies.ts
+│   │   ├── skills.ts
+│   │   ├── contact.ts
+│   │   └── nav.ts
+│   ├── components/
+│   │   ├── sections/           # One file per section
+│   │   ├── ui/                 # Section, Logo
+│   │   ├── effects/            # CRTScreen, GlowingMark, YouTubeFacade, …
+│   │   └── layout/             # AppShell, NavMenu
+│   └── lib/                    # cn, useInView, reducedMotion, accents
+├── public/
+│   ├── resume.html             # Print-friendly résumé page
+│   ├── resume.txt              # Plain text for ATS uploads
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── .nojekyll               # Disable Jekyll on GitHub Pages
+│   └── _headers                # Cloudflare Pages headers (ignored by GH Pages)
+├── resume-assets/              # Non-build assets — see resume-assets/README.md
+├── scripts/
+│   └── visual-check.mjs        # Playwright smoke test
+└── .github/workflows/deploy.yml
+```
+
+## Adding a project, role, case study, or skill
+
+Edit the relevant TS file in `src/data/`. No component changes needed.
+
+## Editing the résumé
+
+Three sources, kept in sync manually:
+- `RESUME.md` — canonical content
+- `public/resume.html` — printed / linked version
+- `public/resume.txt` — for ATS uploads
+
+When you edit one, edit the others.
+
+## Custom domain
+
+When `aaronlilla.com` (or any other domain) is registered:
+
+1. Create `public/CNAME` with the bare domain (one line, e.g. `aaronlilla.com`).
+2. At the registrar, add an `A` record pointing to GitHub Pages IPs:
+   - 185.199.108.153
+   - 185.199.109.153
+   - 185.199.110.153
+   - 185.199.111.153
+3. Sweep `aaronlilla.github.io` → `aaronlilla.com` in `index.html`, `public/sitemap.xml`, `public/robots.txt`, `RESUME.md`, `public/resume.html`, `public/resume.txt`.
+4. Push. GitHub Pages auto-issues SSL within a few minutes.
