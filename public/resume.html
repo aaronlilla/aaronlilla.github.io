@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aaron Lilla — Full-Stack Software Engineer · Résumé</title>
-  <meta name="description" content="Aaron Lilla — Full-stack software engineer. 13 years experience in React, TypeScript, Node.js, Electron. Lead engineer on TableCaptain (30+ venues). Shipped Spire of Ash on Steam." />
+  <title>Aaron Lilla - Full-Stack Software Engineer - Resume</title>
+  <meta name="description" content="Aaron Lilla - Full-stack software engineer. 13 years experience in React, TypeScript, Node.js, Electron. Lead engineer on TableCaptain (30+ venues). Shipped Spire of Ash on Steam." />
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -21,7 +21,6 @@
       --ink-3: #555c69;
       --rule: #d8d3c5;
       --accent: #b8531a;
-      --accent-soft: #ddc9a2;
     }
 
     * { box-sizing: border-box; }
@@ -30,7 +29,7 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       font-size: 10.5pt;
-      line-height: 1.45;
+      line-height: 1.5;
       color: var(--ink);
       background: var(--bg);
       -webkit-font-smoothing: antialiased;
@@ -77,36 +76,37 @@
     h1 {
       font-size: 22pt;
       font-weight: 700;
-      letter-spacing: -0.01em;
       margin: 0 0 2px 0;
-      line-height: 1.05;
+      line-height: 1.1;
     }
     .role-line {
       font-size: 11pt;
       color: var(--ink-2);
       margin: 0 0 8px 0;
+      font-weight: 500;
     }
-    .contact {
+    .contact-location {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9pt;
       color: var(--ink-3);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 14px;
-      margin-bottom: 14px;
+      margin: 0 0 2px 0;
     }
-    .contact a {
+    .contact-links {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9pt;
+      color: var(--ink-3);
+      margin: 0 0 14px 0;
+      line-height: 1.6;
+    }
+    .contact-links a {
       color: var(--ink-2);
       text-decoration: none;
-      border-bottom: 1px solid var(--rule);
     }
 
     h2 {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9pt;
+      font-size: 10pt;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
       color: var(--accent);
       margin: 16px 0 8px 0;
       padding-bottom: 4px;
@@ -123,85 +123,74 @@
       margin-bottom: 12px;
       page-break-inside: avoid;
     }
-    .role-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4px 12px;
-    }
-    .role-title {
-      font-weight: 600;
+    h3.role-title {
       font-size: 11pt;
+      font-weight: 600;
+      margin: 0 0 2px 0;
       color: var(--ink);
     }
-    .role-org {
-      color: var(--ink-2);
-    }
-    .role-period {
+    .role-meta {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9pt;
       color: var(--ink-3);
-      white-space: nowrap;
+      margin: 0 0 4px 0;
     }
     .role-summary {
-      margin: 4px 0 4px 0;
+      margin: 4px 0;
       color: var(--ink-2);
     }
     ul.bullets {
-      margin: 4px 0 4px 0;
+      margin: 4px 0;
       padding-left: 18px;
     }
     ul.bullets li {
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
     .stack {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 8.5pt;
+      font-size: 9pt;
       color: var(--ink-3);
-      margin-top: 4px;
+      margin-top: 6px;
     }
-    .stack-label {
+    .stack strong {
       color: var(--accent);
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-right: 6px;
     }
 
     .project {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       page-break-inside: avoid;
     }
-    .project-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4px 12px;
+    h3.project-title {
+      font-size: 10.5pt;
+      font-weight: 600;
+      margin: 0 0 2px 0;
+      color: var(--ink);
     }
-    .project-title { font-weight: 600; }
-    .project-desc { color: var(--ink-2); }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: max-content 1fr;
-      column-gap: 16px;
-      row-gap: 4px;
-    }
-    .skills-grid dt {
+    .project-meta {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9pt;
-      color: var(--accent);
-      font-weight: 600;
+      color: var(--ink-3);
+      margin: 0 0 3px 0;
     }
-    .skills-grid dd {
-      margin: 0;
+    .project-desc {
       color: var(--ink-2);
+      margin: 0;
+    }
+
+    .skills p {
+      margin: 0 0 4px 0;
+    }
+    .skills strong {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9pt;
+      font-weight: 600;
     }
 
     .education {
       color: var(--ink-2);
+      margin: 0;
     }
 
     @media print {
@@ -226,179 +215,132 @@
 <body>
 
 <div class="toolbar">
-  <span>Aaron Lilla · Résumé</span>
+  <span>Aaron Lilla - Resume</span>
   <button onclick="window.print()">Print / Save as PDF</button>
   <a href="/resume.txt">Plain text (ATS)</a>
-  <a href="/">← Back to site</a>
+  <a href="/">Back to site</a>
 </div>
 
 <main class="page" role="main">
   <header>
     <h1>Aaron Lilla</h1>
-    <p class="role-line">Full-Stack Software Engineer · React, TypeScript, Node.js, Electron</p>
-    <p class="contact">
-      <span>Las Vegas, NV (Remote)</span>
-      <span>·</span>
+    <p class="role-line">Full-Stack Software Engineer | React, TypeScript, Node.js, Electron</p>
+    <p class="contact-location">Las Vegas, NV (Remote)</p>
+    <p class="contact-links">
       <a href="mailto:aaronjlilla@gmail.com">aaronjlilla@gmail.com</a>
-      <span>·</span>
+      |
       <a href="https://aaronlilla.github.io">aaronlilla.github.io</a>
-      <span>·</span>
+      |
       <a href="https://github.com/aaronlilla">github.com/aaronlilla</a>
-      <span>·</span>
+      |
       <a href="https://www.linkedin.com/in/aaronlilla">linkedin.com/in/aaronlilla</a>
     </p>
   </header>
 
   <section>
-    <h2>Summary</h2>
+    <h2>SUMMARY</h2>
     <p class="summary">
-      Full-stack software engineer with <strong>13 years of web development experience</strong> and 8+ years deep in modern JavaScript. Lead front-end engineer on <strong>TableCaptain</strong> — a React + Electron platform deployed in <strong>30+ poker rooms</strong> across the U.S. and Asia, orchestrating <strong>450+ concurrent in-venue displays</strong> over a single WebSocket fabric. Founder of <strong>Afterimage Studio</strong>, with <strong>Spire of Ash</strong> shipped on Steam and Holoscene in development. Production AI-tooling experience: multi-agent build pipelines, MCP-based agent integration, deterministic TS↔C# parity validation across ~48K LOC.
+      Full-stack software engineer with 13 years of web development experience and 8+ years deep in modern JavaScript. Lead front-end engineer on TableCaptain, a React and Electron platform deployed in 30+ poker rooms across the U.S. and Asia, orchestrating 450+ concurrent in-venue displays over a single WebSocket fabric. Founder of Afterimage Studio, with Spire of Ash shipped on Steam and Holoscene in development. Production AI tooling experience: multi-agent build pipelines, MCP-based agent integration, deterministic TypeScript-to-C# parity validation across approximately 48,000 lines of code.
     </p>
   </section>
 
+  <section class="skills">
+    <h2>SKILLS</h2>
+    <p><strong>Languages:</strong> TypeScript, JavaScript (ES2024), Node.js, C# (.NET), HTML5, CSS3</p>
+    <p><strong>Frontend:</strong> React, Redux, Tailwind CSS, Vite, Design Systems, Accessibility (WCAG), Figma to React</p>
+    <p><strong>Backend:</strong> Node.js, REST APIs, WebSockets, PostgreSQL, SQLite, Schema Design, Auth and Sessions</p>
+    <p><strong>Desktop and Real-time:</strong> Electron (IPC, preload, auto-update, native subprocess), Real-time sync, Optimistic UI and reconciliation</p>
+    <p><strong>Architecture and Practice:</strong> System Design, Scalable Architecture, Code Review, Mentoring, Agile, Scrum</p>
+    <p><strong>AI and Tooling:</strong> Claude API, MCP (Model Context Protocol), Multi-agent pipelines, LLM streaming, Prompt engineering, AI-assisted development</p>
+    <p><strong>Testing and DevOps:</strong> Playwright, Vitest, Jest, CI/CD, Visual regression, Performance profiling, Git</p>
+  </section>
+
   <section>
-    <h2>Experience</h2>
+    <h2>EXPERIENCE</h2>
 
     <div class="role">
-      <div class="role-head">
-        <div>
-          <span class="role-title">Founder · Lead Engineer</span>
-          <span class="role-org"> — Afterimage Studio (Holoscene, in development)</span>
-        </div>
-        <span class="role-period">2025 — Present · Remote</span>
-      </div>
+      <h3 class="role-title">Founder, Lead Engineer - Afterimage Studio (Holoscene, in development)</h3>
+      <p class="role-meta">2025 - Present | Remote</p>
       <p class="role-summary">Building an indie game studio end-to-end. Engine, runtime, content pipeline, custom tooling, and an MCP-integrated balance simulator that lets AI agents prototype and validate changes in-process.</p>
       <ul class="bullets">
-        <li>Architected a deterministic combat engine in C# (<strong>~48,000 LOC</strong>) with a TypeScript reference spec; Monte Carlo parity gate rejects drift above 0.5% across 1,000 seeds.</li>
-        <li>Designed a multi-agent build pipeline coordinating 7+ specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, cross-mode validator) shipping coordinated changes across 6 game modes against a frozen invariant contract — no merge conflicts to date.</li>
-        <li>Engineered an Ability Priority Language (APL) evaluator and a 36-mechanic dispatch system supporting <strong>36 hero archetypes</strong> with <strong>14 aura patterns</strong>, resolving cross-character passive synergies deterministically per simulation tick.</li>
-        <li>Built a TypeScript-to-Unity data pipeline that exports versioned ScriptableObject .asset files plus JSON sidecars from a single TS source of truth — eliminating data-shape drift between studio and engine.</li>
+        <li>Architected a deterministic combat engine in C# (approximately 48,000 lines of code) with a TypeScript reference spec; Monte Carlo parity gate rejects drift above 0.5% across 1,000 seeds.</li>
+        <li>Designed a multi-agent build pipeline coordinating 7+ specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, cross-mode validator) shipping coordinated changes across 6 game modes against a frozen invariant contract, with zero merge conflicts to date.</li>
+        <li>Engineered an Ability Priority Language (APL) evaluator and a 36-mechanic dispatch system supporting 36 hero archetypes with 14 aura patterns, resolving cross-character passive synergies deterministically per simulation tick.</li>
+        <li>Built a TypeScript-to-Unity data pipeline that exports versioned ScriptableObject .asset files plus JSON sidecars from a single TypeScript source of truth, eliminating data-shape drift between studio and engine.</li>
       </ul>
-      <p class="stack"><span class="stack-label">Stack</span>Unity · C# · TypeScript · Node.js · MCP · Claude API · PlayFab · Addressables</p>
+      <p class="stack"><strong>Stack:</strong> Unity, C#, TypeScript, Node.js, MCP, Claude API, PlayFab, Addressables</p>
     </div>
 
     <div class="role">
-      <div class="role-head">
-        <div>
-          <span class="role-title">Frontend Engineer</span>
-          <span class="role-org"> — PokerAtlas (TableCaptain)</span>
-        </div>
-        <span class="role-period">2019 — 2025 · Las Vegas (Hybrid)</span>
-      </div>
-      <p class="role-summary">Led front-end development of TableCaptain — a React + Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia, orchestrating <strong>450+ concurrent in-venue displays</strong> over a single WebSocket fabric. <strong>Video walkthroughs of Floor Editor, Table Manager, Waitlist, Auto Updater, and the in-venue TV display: <a href="https://aaronlilla.github.io/#work">aaronlilla.github.io</a>.</strong></p>
+      <h3 class="role-title">Frontend Engineer - PokerAtlas (TableCaptain)</h3>
+      <p class="role-meta">2019 - 2025 | Las Vegas, NV (Hybrid)</p>
+      <p class="role-summary">Led front-end development of TableCaptain, a React and Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia, orchestrating 450+ concurrent in-venue displays over a single WebSocket fabric. Video walkthroughs of Floor Editor, Table Manager, Waitlist, Auto Updater, and the in-venue TV display: aaronlilla.github.io.</p>
       <ul class="bullets">
-        <li>Scaled TableCaptain V2 to a <strong>market-leading position by adoption</strong> in 2024 (per company assessment), serving 30+ active poker rooms.</li>
-        <li>Architected the real-time WebSocket sync layer: <strong>450+ concurrent displays</strong> (15+ per venue × 30+ venues) with sub-second update latency across variable venue network conditions.</li>
+        <li>Scaled TableCaptain V2 to a market-leading position by adoption in 2024 (per company assessment), serving 30+ active poker rooms.</li>
+        <li>Architected the real-time WebSocket sync layer: 450+ concurrent displays (15+ per venue across 30+ venues) with sub-second update latency across variable venue network conditions.</li>
         <li>Engineered core features end-to-end: floor editor, table manager, waitlist, employee manager, and a real-time in-venue display HUD with optimistic UI and server-confirmed reconciliation.</li>
-        <li>Automated Electron auto-update + CI/CD pipeline with staged rollout and rollback; bi-weekly releases, hotfixes in under 10 minutes — <strong>zero major downtime incidents across 6 years</strong> of production.</li>
-        <li>Led TypeScript + Redux migration; mentored junior engineers and introduced code-review practices adopted across the team.</li>
+        <li>Automated Electron auto-update and CI/CD pipeline with staged rollout and rollback; bi-weekly releases, hotfixes in under 10 minutes, with zero major downtime incidents across 6 years of production.</li>
+        <li>Led TypeScript and Redux migration; mentored junior engineers and introduced code-review practices adopted across the team.</li>
         <li>Translated Figma mockups into pixel-perfect, responsive React components and reusable design-system primitives.</li>
       </ul>
-      <p class="stack"><span class="stack-label">Stack</span>React · Redux · Electron · WebSockets · .NET (integration) · Webpack · CI/CD · Figma · Agile</p>
+      <p class="stack"><strong>Stack:</strong> React, Redux, Electron, WebSockets, .NET (integration), Webpack, CI/CD, Figma, Agile</p>
     </div>
 
     <div class="role">
-      <div class="role-head">
-        <div>
-          <span class="role-title">Founder · Lead Engineer</span>
-          <span class="role-org"> — Afterimage Studio (Spire of Ash, shipped on Steam)</span>
-        </div>
-        <span class="role-period">2022 — 2024 · Remote</span>
-      </div>
-      <p class="role-summary">Shipped a roguelike ARPG on Steam end-to-end — engine, content tooling, loot math, and the build pipeline.</p>
+      <h3 class="role-title">Founder, Lead Engineer - Afterimage Studio (Spire of Ash, shipped on Steam)</h3>
+      <p class="role-meta">2022 - 2024 | Remote</p>
+      <p class="role-summary">Shipped a roguelike ARPG on Steam end-to-end: engine, content tooling, loot math, and the build pipeline.</p>
       <ul class="bullets">
-        <li>Self-shipped on Steam — full production cycle from prototype to publish (store.steampowered.com/app/4450160).</li>
+        <li>Self-shipped on Steam: full production cycle from prototype to publish (store.steampowered.com/app/4450160).</li>
         <li>Built the procedural affix generator and audit scripts that gate item rolls against design tolerances.</li>
         <li>Patterns proven here became the foundation of the Holoscene engine and tooling.</li>
       </ul>
-      <p class="stack"><span class="stack-label">Stack</span>Unity · C# · TypeScript · Node.js · Steam</p>
+      <p class="stack"><strong>Stack:</strong> Unity, C#, TypeScript, Node.js, Steam</p>
     </div>
 
     <div class="role">
-      <div class="role-head">
-        <div>
-          <span class="role-title">Frontend Developer</span>
-          <span class="role-org"> — USCRE Online</span>
-        </div>
-        <span class="role-period">2017 — 2019 · Las Vegas (Hybrid)</span>
-      </div>
+      <h3 class="role-title">Frontend Developer - USCRE Online</h3>
+      <p class="role-meta">2017 - 2019 | Las Vegas, NV (Hybrid)</p>
       <p class="role-summary">Built a single-page React app delivering real-time commercial real estate data for 5,000+ properties.</p>
       <ul class="bullets">
         <li>Cut quote retrieval time by 50% via Redux-driven caching, request deduplication, and database query optimization on the search path.</li>
-        <li>Shipped a 20-component reusable library, dropping front-end bug rate by ~40% in 6 months.</li>
+        <li>Shipped a 20-component reusable library, dropping front-end bug rate by approximately 40% in 6 months.</li>
         <li>Drove load time under 1.2s; lifted Core Web Vitals into the green and improved organic search ranking.</li>
       </ul>
-      <p class="stack"><span class="stack-label">Stack</span>React · Redux · JavaScript · HTML5 · CSS3</p>
+      <p class="stack"><strong>Stack:</strong> React, Redux, JavaScript, HTML5, CSS3</p>
     </div>
 
     <div class="role">
-      <div class="role-head">
-        <div>
-          <span class="role-title">Freelance Web Developer</span>
-          <span class="role-org"> — Self-Employed</span>
-        </div>
-        <span class="role-period">2012 — Present · Remote</span>
-      </div>
-      <p class="role-summary">Freelance practice concurrent with salaried roles — landing pages, custom dashboards, Discord bots, and small SaaS tools.</p>
+      <h3 class="role-title">Freelance Web Developer - Self-Employed</h3>
+      <p class="role-meta">2012 - Present | Remote</p>
+      <p class="role-summary">Freelance practice concurrent with salaried roles: landing pages, custom dashboards, Discord bots, and small SaaS tools.</p>
     </div>
   </section>
 
   <section>
-    <h2>Notable Side Projects</h2>
+    <h2>PROJECTS</h2>
 
     <div class="project">
-      <div class="project-head">
-        <span class="project-title">Clippa</span>
-        <span class="role-period">Electron · MCP · ffmpeg</span>
-      </div>
-      <p class="project-desc">Local-first Electron app that detects highlight moments in long-form video and lets users review them on a timeline before exporting clips. Multi-stage media pipeline (ingest → audio analysis → scene detection → event classification) on a SQLite-backed job queue. Exposes a dual-transport <strong>MCP server (HTTP + stdio, bearer-token auth)</strong> so external agents can drive the entire workflow programmatically.</p>
+      <h3 class="project-title">Clippa</h3>
+      <p class="project-meta">Electron, MCP, ffmpeg, SQLite</p>
+      <p class="project-desc">Local-first Electron app that detects highlight moments in long-form video and lets users review them on a timeline before exporting clips. Multi-stage media pipeline (ingest, audio analysis, scene detection, event classification) on a SQLite-backed job queue. Exposes a dual-transport MCP server (HTTP and stdio, bearer-token auth) so external agents can drive the entire workflow programmatically.</p>
     </div>
 
     <div class="project">
-      <div class="project-head">
-        <span class="project-title">FiveStack</span>
-        <span class="role-period">React · Node.js · Raider.io API</span>
-      </div>
+      <h3 class="project-title">FiveStack</h3>
+      <p class="project-meta">React, Node.js, Raider.io API</p>
       <p class="project-desc">Mythic+ team-building platform with AI-assisted matchmaking and live Raider.io integration. github.com/aaronlilla/FiveStack</p>
     </div>
 
     <div class="project">
-      <div class="project-head">
-        <span class="project-title">Discord AI Chatbot</span>
-        <span class="role-period">Node.js · discord.js · streaming LLM</span>
-      </div>
-      <p class="project-desc">Discord bot that streams LLM responses token-by-token into a channel in real time. Conversation memory + per-channel personality config. github.com/aaronlilla/discord-ai-chatbot</p>
+      <h3 class="project-title">Discord AI Chatbot</h3>
+      <p class="project-meta">Node.js, discord.js, streaming LLM</p>
+      <p class="project-desc">Discord bot that streams LLM responses token-by-token into a channel in real time. Conversation memory and per-channel personality config. github.com/aaronlilla/discord-ai-chatbot</p>
     </div>
   </section>
 
   <section>
-    <h2>Skills</h2>
-    <dl class="skills-grid">
-      <dt>Languages</dt>
-      <dd>TypeScript · JavaScript (ES2024) · Node.js · C# (.NET) · HTML5 · CSS3</dd>
-
-      <dt>Frontend</dt>
-      <dd>React · Redux · Tailwind CSS · Vite · Design Systems · Accessibility (WCAG) · Figma → React</dd>
-
-      <dt>Backend</dt>
-      <dd>Node.js · REST APIs · WebSockets · PostgreSQL · SQLite · Schema Design · Auth &amp; Sessions</dd>
-
-      <dt>Desktop &amp; Real-time</dt>
-      <dd>Electron (IPC, preload, auto-update) · Real-time sync · Optimistic UI + reconciliation</dd>
-
-      <dt>Architecture &amp; Practice</dt>
-      <dd>System Design · Scalable Architecture · Code Review · Mentoring · Agile / Scrum</dd>
-
-      <dt>AI / Tooling</dt>
-      <dd>Claude API · MCP (Model Context Protocol) · Multi-agent pipelines · LLM streaming · Prompt engineering · AI-assisted development</dd>
-
-      <dt>Testing / DevOps</dt>
-      <dd>Playwright · Vitest · Jest · CI/CD · Visual regression · Performance profiling · Git</dd>
-    </dl>
-  </section>
-
-  <section>
-    <h2>Education</h2>
+    <h2>EDUCATION</h2>
     <p class="education">College of Southern Nevada, Las Vegas, NV</p>
   </section>
 </main>
