@@ -1,0 +1,19 @@
+Aaron Lilla
+Full-Stack Software Engineer
+Las Vegas, NV (Remote) | (702) 964-5163 | aaronjlilla@gmail.com | linkedin.com/in/aaronlilla | github.com/aaronlilla | aaronlilla.github.io
+Authorized to work in the U.S. (no sponsorship required) | Native English speaker
+
+Dear Hiring Manager,
+
+I'm a full-stack software engineer with 13 years of experience - 8+ of them deep in React, TypeScript, and Node - writing to apply for your open engineering role. I've spent my career shipping real products end to end, and I'd bring that same ownership to your team.
+
+For six years I was the lead front-end engineer on TableCaptain, a React and Electron platform that runs live in 30+ poker rooms across the U.S. and Asia. I architected its real-time WebSocket layer (450+ in-venue displays synced sub-second), owned core features end to end, and ran the Electron auto-update and CI/CD pipeline - bi-weekly releases, sub-10-minute hotfixes, and zero major downtime over six years. It became the #1 system in its category by adoption in 2024.
+
+I also design, build, and ship independently under my studio, Afterimage Studio. Spire of Ash is a commercial game I self-published to Steam as a TypeScript and Electron app - a Three.js 3D client, a Supabase cloud backend, and real-time leaderboards, maintained across 20+ live releases. I'm now building Holoscene on a TypeScript design studio plus a deterministic C# engine, with a multi-agent Claude Code pipeline that lets AI prototype and validate changes in-process.
+
+What you'd get is a senior engineer who has owned production systems at scale and is fluent in the AI-assisted development patterns reshaping how teams ship in 2026 - someone you can hand an ambiguous problem and trust to deliver. I work remotely, I'm authorized to work in the U.S. (no sponsorship needed), and I move fast without breaking the things that matter.
+
+I'd welcome the chance to talk about how I can help. Thank you for your time and consideration.
+
+Sincerely,
+Aaron Lilla

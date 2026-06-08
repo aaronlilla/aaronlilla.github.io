@@ -16,13 +16,11 @@ export function About() {
             For six years I led front-end engineering on{' '}
             <span className="crt-bloom-amber">TableCaptain</span>, a React +
             Electron platform deployed in <strong>30+ poker rooms</strong>{' '}
-            across the U.S. and Asia — orchestrating <strong>450+ concurrent
-            in-venue displays</strong> over a single WebSocket fabric with
-            sub-second latency. Real-time TV displays, dealer rotation,
+            across the U.S. and Asia. Real-time TV displays, dealer rotation,
             waitlist, an Electron auto-updater shipping hotfixes in under ten
             minutes — owned the codebase, the design system, and the release
-            pipeline. By 2024 it reached a market-leading adoption position
-            for casino-floor management.
+            pipeline. In 2024 it became the #1 poker room management system
+            by adoption.
           </p>
           <p>
             On the side I ship games under{' '}
@@ -58,6 +56,18 @@ export function About() {
           <div>
             <dt className="crt-label">Focus</dt>
             <dd className="mt-2 text-crt-text/90">React · TS · Node · Electron · AI tooling</dd>
+          </div>
+          <div>
+            <dt className="crt-label">Authorization</dt>
+            <dd className="mt-2 text-crt-text/90">U.S. · no sponsorship</dd>
+          </div>
+          <div>
+            <dt className="crt-label">Timezone</dt>
+            <dd className="mt-2 text-crt-text/90">Pacific (PT)</dd>
+          </div>
+          <div>
+            <dt className="crt-label">Languages</dt>
+            <dd className="mt-2 text-crt-text/90">English (native)</dd>
           </div>
           <div className="col-span-2">
             <dt className="crt-label">Résumé</dt>

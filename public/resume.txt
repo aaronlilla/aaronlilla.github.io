@@ -1,188 +1,97 @@
-AARON LILLA
-Full-Stack Software Engineer | React, TypeScript, Node.js, Electron
+Aaron Lilla
+Full-Stack Software Engineer
+React | TypeScript | Node.js | Electron | Real-time Systems | AI Tooling
 
-Las Vegas, NV (Remote)
-aaronjlilla@gmail.com
-https://aaronlilla.github.io
-https://github.com/aaronlilla
-https://www.linkedin.com/in/aaronlilla
+Location: Las Vegas, NV (Remote)
+Phone: (702) 964-5163
+Email: aaronjlilla@gmail.com
+LinkedIn: linkedin.com/in/aaronlilla
+GitHub: github.com/aaronlilla
+Website: aaronlilla.github.io
+Authorized to work in the U.S. (no sponsorship required) | Native English speaker
 
 
 SUMMARY
-=======
 
-Full-stack software engineer with 13 years of web development experience
-and 8+ years deep in modern JavaScript. Lead front-end engineer on
-TableCaptain, a React and Electron platform deployed in 30+ poker rooms
-across the U.S. and Asia, orchestrating 450+ concurrent in-venue displays
-over a single WebSocket fabric. Founder of Afterimage Studio, with Spire
-of Ash shipped on Steam and Holoscene in development. Production AI
-tooling experience: multi-agent build pipelines, MCP-based agent
-integration, deterministic TypeScript-to-C# parity validation across
-approximately 48,000 lines of code.
+Full-stack software engineer with 13 years in web development and 8+ years in modern JavaScript and TypeScript. Lead front-end engineer on TableCaptain - a React and Electron platform in 30+ poker rooms across the U.S. and Asia - driving 450+ concurrent in-venue displays over one real-time WebSocket fabric with zero major downtime in six years. Founder of Afterimage Studio: self-published Spire of Ash, a commercial TypeScript/Electron game, on Steam, and building Holoscene on a TypeScript design studio plus a deterministic C# engine with an AI-agent tooling pipeline.
 
 
 SKILLS
-======
 
-Languages:       TypeScript, JavaScript (ES2024), Node.js, C# (.NET),
-                 HTML5, CSS3
-
-Frontend:        React, Redux, Tailwind CSS, Vite, Design Systems,
-                 Accessibility (WCAG), Figma to React
-
-Backend:         Node.js, REST APIs, WebSockets, PostgreSQL, SQLite,
-                 Schema Design, Auth and Sessions
-
-Desktop / RT:    Electron (IPC, preload, auto-update, native
-                 subprocess), Real-time sync, Optimistic UI and
-                 reconciliation
-
-Architecture:    System Design, Scalable Architecture, Code Review,
-                 Mentoring, Agile, Scrum
-
-AI / Tooling:    Claude API, MCP (Model Context Protocol), Multi-agent
-                 pipelines, LLM streaming, Prompt engineering,
-                 AI-assisted development
-
-Testing/DevOps:  Playwright, Vitest, Jest, CI/CD, Visual regression,
-                 Performance profiling, Git
+Languages: TypeScript, JavaScript (ES2024), Node.js, C# (.NET), HTML5, CSS3, SQL
+Frontend: React, Redux, Next.js, Tailwind CSS, Vite, Three.js, Design Systems, Responsive UI, Accessibility (WCAG)
+Backend & Real-time: Node.js, Express, REST APIs, WebSockets, Supabase, PostgreSQL, SQLite, Electron (IPC, preload, auto-update), Auth & Sessions (OAuth)
+AI & Tooling: Claude API, MCP (Model Context Protocol), Multi-agent Pipelines, LLM Streaming, Prompt Engineering, AI-assisted Development
+Architecture & Practice: System Design, Scalable Architecture, Deterministic Simulation, Code Review, Mentoring, Agile / Scrum
+Testing & DevOps: Vitest, Jest, Playwright, CI/CD, Visual Regression, Performance Profiling, Git, AWS, Azure
 
 
 EXPERIENCE
-==========
 
-Founder, Lead Engineer
-Afterimage Studio (Holoscene, in development)
+Founder and Lead Engineer
+Afterimage Studio
 2025 - Present | Remote
 
-Building an indie game studio end-to-end. Engine, runtime, content
-pipeline, custom tooling, and an MCP-integrated balance simulator that
-lets AI agents prototype and validate changes in-process.
+Holoscene (in development) - a buildcraft ARPG built end-to-end across a TypeScript/React design studio and a deterministic C#/.NET engine on Godot, with an AI-agent pipeline that lets Claude prototype and validate changes in-process.
 
-- Architected a deterministic combat engine in C# (approximately 48,000
-  lines of code) with a TypeScript reference spec; Monte Carlo parity
-  gate rejects drift above 0.5% across 1,000 seeds.
-- Designed a multi-agent build pipeline coordinating 7+ specialized
-  Claude Code agents (combat runtime, balance validator, data exporter,
-  mode implementor, cross-mode validator) shipping coordinated changes
-  across 6 game modes against a frozen invariant contract, with zero
-  merge conflicts to date.
-- Engineered an Ability Priority Language (APL) evaluator and a
-  36-mechanic dispatch system supporting 36 hero archetypes with 14
-  aura patterns, resolving cross-character passive synergies
-  deterministically per simulation tick.
-- Built a TypeScript-to-Unity data pipeline that exports versioned
-  ScriptableObject assets plus JSON sidecars from a single TypeScript
-  source of truth, eliminating data-shape drift between studio and
-  engine.
+- Built a TypeScript + React (React 19, Vite) design studio as the single source of truth - a deterministic combat simulator with an ability-priority (APL) evaluator, aura and synergy systems, and content authoring for 100 characters, 500 skills, and 2,000+ items.
+- Engineered a deterministic, tick-based simulator (seeded RNG, typed event-stream architecture) and a Monte Carlo parity harness that holds the C#/.NET engine within 0.5% of the TypeScript reference across 1,000 seeded runs.
+- Wrote 66 automated balance and parity audit scripts (Node.js) that enforce design contracts in CI - per-character DPS/EHP bands, cross-mode parity, loot and affix coverage - plus a 30-suite Vitest pack over the simulator.
+- Designed a multi-agent build pipeline of specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, cross-mode validator) coordinating against a frozen invariant contract, with an MCP-driven dashboard monitoring agent and engine state.
 
-Stack: Unity, C#, TypeScript, Node.js, MCP, Claude API, PlayFab,
-       Addressables
+Technologies: TypeScript, React, Node.js, Vite, C#, .NET, Godot, MCP, Claude API, Vitest
+
+
+Founder and Lead Engineer
+Afterimage Studio
+2022 - 2024 | Remote
+
+Spire of Ash (shipped on Steam) - a commercial roguelite ARPG I designed, built, and self-published end-to-end as a TypeScript and Electron desktop app (~74,000 lines of TypeScript, 600+ tests).
+
+- Shipped a full live-service product to Steam and maintained it across 20+ releases (Steamworks integration, electron-builder packaging, staged auto-update, Sentry crash reporting, and Chinese localization).
+- Built the 3D game client with Three.js / React Three Fiber and a Pixi.js Path-of-Exile-style passive tree, on a React + Redux Toolkit / Zustand UI with a spatial-hash and pathfinding engine.
+- Built a Supabase cloud backend (auth, cloud saves with conflict resolution, IndexedDB fallback) and real-time WebSocket leaderboards ranked per mode and key level.
+- Engineered the procedural systems - a 442-affix item generator, a procedural passive-tree generator, and 988 collectible cards - and gated every release with a headless combat worker and Monte Carlo balance audits.
+
+Technologies: TypeScript, React, Electron, Three.js, Pixi.js, Redux, Supabase, Steamworks, Vite, Vitest, Playwright
 
 
 Frontend Engineer
-PokerAtlas (TableCaptain)
+PokerAtlas
 2019 - 2025 | Las Vegas, NV (Hybrid)
 
-Led front-end development of TableCaptain, a React and Electron poker
-room management platform adopted in 30+ rooms across the U.S. and Asia,
-orchestrating 450+ concurrent in-venue displays over a single WebSocket
-fabric. Video walkthroughs at aaronlilla.github.io
+Led front-end development of TableCaptain, a React and Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia. Video walkthroughs of the Floor Editor, Table Manager, Waitlist, and in-venue TV display at aaronlilla.github.io.
 
-- Scaled TableCaptain V2 to a market-leading position by adoption in
-  2024 (per company assessment), serving 30+ active poker rooms.
-- Architected the real-time WebSocket sync layer: 450+ concurrent
-  displays (15+ per venue across 30+ venues) with sub-second update
-  latency across variable venue network conditions.
-- Engineered core features end-to-end: floor editor, table manager,
-  waitlist, employee manager, and a real-time in-venue display HUD with
-  optimistic UI and server-confirmed reconciliation.
-- Automated Electron auto-update and CI/CD pipeline with staged rollout
-  and rollback; bi-weekly releases with hotfixes in under 10 minutes,
-  with zero major downtime incidents across 6 years of production.
-- Led TypeScript and Redux migration across the codebase; mentored
-  junior engineers and introduced code-review practices adopted across
-  the team.
-- Translated Figma mockups into pixel-perfect, responsive React
-  components and reusable design-system primitives.
+- Architected the real-time WebSocket sync layer - 450+ concurrent displays (15+ per venue across 30+ venues) with sub-second latency - and scaled TableCaptain V2 to the #1 poker room management system by adoption in 2024 (per company assessment).
+- Engineered core features end-to-end (floor editor, table manager, waitlist, employee manager, and a real-time in-venue display HUD with optimistic UI and server-confirmed reconciliation); integrated a .NET backend over WebSockets.
+- Automated the Electron auto-update and CI/CD pipeline with staged rollout and rollback - bi-weekly releases, sub-10-minute hotfixes, and zero major downtime incidents across six years of production.
+- Led the TypeScript and Redux migration, mentored engineers, and introduced code-review practices; translated Figma mockups into reusable React design-system components.
 
-Stack: React, Redux, Electron, WebSockets, .NET (integration), Webpack,
-       CI/CD, Figma, Agile
-
-
-Founder, Lead Engineer
-Afterimage Studio (Spire of Ash, shipped on Steam)
-2022 - 2024 | Remote
-
-Shipped a roguelike ARPG on Steam end-to-end: engine, content tooling,
-loot math, and the build pipeline.
-
-- Self-shipped on Steam: full production cycle from prototype to
-  publish. store.steampowered.com/app/4450160
-- Built the procedural affix generator and audit scripts that gate item
-  rolls against design tolerances; the loot math pipeline informs
-  current Holoscene combat parity work.
-- Patterns proven here became the foundation of the Holoscene engine
-  and tooling.
-
-Stack: Unity, C#, TypeScript, Node.js, Steam
+Technologies: React, Redux, Electron, WebSockets, .NET (integration), Webpack, CI/CD, Figma
 
 
 Frontend Developer
 USCRE Online
 2017 - 2019 | Las Vegas, NV (Hybrid)
 
-Built a single-page React app delivering real-time commercial real
-estate data for 5,000+ properties.
+Built a single-page React app delivering real-time commercial real estate data for 5,000+ properties.
 
-- Cut quote retrieval time by 50% via Redux-driven caching, request
-  deduplication, and database query optimization on the search path.
-- Shipped a 20-component reusable library, dropping front-end bug rate
-  by approximately 40% in 6 months.
-- Drove load time under 1.2s; lifted Core Web Vitals into the green
-  and improved organic search ranking.
+- Cut quote retrieval time by 50% via Redux-driven caching, request deduplication, and search-path query optimization.
+- Shipped a 20-component reusable UI library (~40% fewer front-end bugs in six months) and drove load time under 1.2s into green Core Web Vitals.
 
-Stack: React, Redux, JavaScript, HTML5, CSS3
-
-
-Freelance Web Developer
-Self-Employed (concurrent with salaried roles)
-2012 - Present | Remote
-
-Landing pages, custom dashboards, Discord bots, and small SaaS tools.
+Technologies: React, Redux, JavaScript, HTML5, CSS3
 
 
 PROJECTS
-========
 
-Clippa
-Electron, MCP, ffmpeg, SQLite
+FiveStack (React | Node/Express | Supabase (PostgreSQL) | OAuth)
+Full-stack Mythic+ team-building platform for World of Warcraft. React 18 front end (React Query, Tailwind) on a Node/Express API with Supabase PostgreSQL (row-level security, real-time subscriptions) and Discord + Battle.net OAuth. AI matchmaking scores players across five compatibility factors (role, rating, experience, schedule, item level) from live Raider.io data. github.com/aaronlilla/FiveStack
 
-Local-first Electron app that detects highlight moments in long-form
-video and lets users review them on a timeline before exporting clips.
-Multi-stage media pipeline (ingest, audio analysis, scene detection,
-event classification) on a SQLite-backed job queue. Exposes a
-dual-transport MCP server (HTTP and stdio, bearer-token auth) so
-external agents can drive the entire workflow programmatically.
-
-
-FiveStack
-React, Node.js, Raider.io API
-
-Mythic+ team-building platform with AI-assisted matchmaking and live
-Raider.io integration. github.com/aaronlilla/FiveStack
-
-
-Discord AI Chatbot
-Node.js, discord.js, streaming LLM
-
-Discord bot that streams LLM responses token-by-token into a channel
-in real time. Conversation memory and per-channel personality config.
-github.com/aaronlilla/discord-ai-chatbot
+Clippa (Electron | React | MCP | ffmpeg | SQLite)
+Local-first Electron app that finds highlight moments in long-form video for review and clip export. Multi-stage media pipeline (ingest, audio, scene detection, event classification) on a SQLite job queue, with a dual-transport MCP server (HTTP + stdio, bearer-token auth) that lets external agents drive the whole workflow.
 
 
 EDUCATION
-=========
 
-College of Southern Nevada, Las Vegas, NV
+College of Southern Nevada
+Organic Chemistry coursework, Las Vegas, NV

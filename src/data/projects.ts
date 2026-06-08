@@ -2,18 +2,47 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    name: 'Holoscene',
+    type: 'Game · In Development · Studio + Engine',
+    stack: ['TypeScript', 'React', 'Node.js', 'Vite', 'C#', '.NET', 'Godot', 'MCP', 'Claude API'],
+    year: '2025 — present',
+    description:
+      "A buildcraft ARPG I'm building end-to-end across two codebases: a TypeScript + React design studio (the single source of truth) and a deterministic C#/.NET game engine on Godot. The studio holds a deterministic combat simulator, content for 100 characters / 500 skills / 2,000+ items, and 66 automated audits that enforce balance and cross-engine parity in CI. An AI-agent pipeline lets Claude prototype and validate changes in-process.",
+    outcomes: [
+      'Deterministic, tick-based combat simulator (seeded RNG, typed event stream) with an ability-priority (APL) evaluator, auras, and cross-character synergy systems.',
+      'Monte Carlo parity harness holds the C# engine within 0.5% of the TypeScript reference across 1,000 seeded runs; 66 audit scripts + a 30-suite Vitest pack gate every change.',
+      'Multi-agent build pipeline of specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, cross-mode validator) with an MCP-driven live dashboard.',
+      'Single-source-of-truth data pipeline codegens the engine data from TypeScript with content-hash drift detection in a pre-commit gate.',
+    ],
+  },
+  {
+    name: 'Spire of Ash',
+    type: 'Game · Shipped on Steam · Electron + TypeScript',
+    stack: ['TypeScript', 'React', 'Electron', 'Three.js', 'Pixi.js', 'Redux', 'Supabase', 'Steamworks'],
+    year: '2022 — 2024',
+    description:
+      'A commercial roguelite ARPG I designed, built, and self-published on Steam — end-to-end as a TypeScript + Electron desktop app (~74,000 lines of TypeScript, 600+ tests). 3D dungeon rendering with Three.js / React Three Fiber, a Pixi.js Path-of-Exile-style passive tree, a Supabase cloud backend, and real-time WebSocket leaderboards.',
+    outcomes: [
+      'Shipped and maintained a live-service product across 20+ releases — Steamworks integration, electron-builder packaging, staged auto-update, Sentry crash reporting, and Chinese localization.',
+      'Built the cloud backend on Supabase (auth, cloud saves with conflict resolution, IndexedDB fallback) and per-mode / per-key-level real-time WebSocket leaderboards.',
+      'Engineered the procedural systems — a 442-affix item generator, a procedural passive-tree generator, and 988 collectible cards — gated by a headless combat worker and Monte Carlo balance audits.',
+    ],
+    links: [
+      { label: 'Steam page', href: 'https://store.steampowered.com/app/4450160/Spire_of_Ash/' },
+    ],
+  },
+  {
     name: 'TableCaptain',
     type: 'Desktop App · Production · 30+ Venues',
     stack: ['React', 'Redux', 'Electron', 'WebSockets', '.NET (integration)', 'Webpack', 'CI/CD'],
     year: '2019 — 2025',
     description:
-      'React + Electron poker room management platform at PokerAtlas. Live in 30+ poker rooms across the U.S. and Asia, orchestrating 450+ concurrent in-venue displays (15+ per venue × 30+ venues) over a single WebSocket fabric with sub-second update latency. Owned core front-end features end-to-end: floor editor, waitlist, table manager, employee manager, dealer rotation, and an auto-update pipeline that ships hotfixes in under 10 minutes.',
+      'React + Electron poker room management platform at PokerAtlas. Live in 30+ poker rooms across the U.S. and Asia, with a real-time WebSocket TV display system driving 15+ synchronized screens per venue. Owned core front-end features end-to-end: floor editor, waitlist, table manager, employee manager, dealer rotation, and an auto-update pipeline that ships hotfixes in under 10 minutes.',
     outcomes: [
-      'Scaled the product to a market-leading position by adoption in 2024, serving 30+ active poker rooms.',
-      'Architected the real-time WebSocket sync layer: 450+ concurrent displays with sub-second latency across variable venue network conditions.',
-      'Built bi-weekly release pipeline with Electron auto-updater + CI/CD (staged rollout + rollback); hotfixes deployable in under 10 minutes; zero major downtime incidents in 6 years.',
-      'Led TypeScript + Redux migration, code review, and mentoring practices across the team.',
-      'Translated Figma mockups into pixel-perfect, responsive React components and reusable design-system primitives.',
+      'Scaled the product to the #1 poker room management system by adoption in 2024.',
+      'Built bi-weekly release pipeline with Electron auto-updater + CI/CD; hotfixes deployable in under 10 minutes.',
+      'Translated Figma mockups into pixel-perfect, responsive React components and reusable primitives.',
+      'Integrated with a .NET backend over WebSockets for sub-second synchronization across 15+ in-venue displays.',
     ],
     videos: [
       { id: 'spwbp0cndwo', label: 'Floor Editor — drag-and-drop layout' },
@@ -25,32 +54,14 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: 'Holoscene',
-    type: 'Indie Game · In Development · Engine + Tooling',
-    stack: ['Unity', 'C#', 'TypeScript', 'Node.js', 'MCP', 'Claude API', 'PlayFab'],
-    year: '2025 — present',
+    name: 'FiveStack',
+    type: 'Web App · Full-Stack · Raider.io + OAuth',
+    stack: ['React', 'Node.js', 'Express', 'Supabase (PostgreSQL)', 'OAuth', 'Raider.io API'],
+    year: '2024 — present',
     description:
-      'In-development ARPG built on a 48K-LOC deterministic combat engine. The combat math has a locked TypeScript reference spec; a C# port is gated by a Monte Carlo parity validator that rejects builds with >0.5% divergence across 1,000 seeds. A custom MCP (Model Context Protocol) tool suite exposes the headless combat sim to Claude, collapsing balance-iteration cycles to single commands.',
-    outcomes: [
-      'Deterministic combat sim — seeded RNG, no global state, bit-identical TS↔C# damage pipeline across ~48,000 LOC C#.',
-      'Multi-agent build pipeline: 7+ specialized Claude Code agents shipping coordinated changes across 6 game modes with no merge conflicts to date.',
-      'APL (Ability Priority Language) evaluator + 36-mechanic dispatch system supporting 36 hero archetypes and 14 aura patterns with deterministic per-tick resolution.',
-      'TS→Unity data pipeline: versioned ScriptableObject + JSON sidecars from one TS source of truth, eliminating data-shape drift.',
-    ],
-  },
-  {
-    name: 'Spire of Ash',
-    type: 'Indie Game · Shipped on Steam',
-    stack: ['Unity', 'C#', 'TypeScript', 'Node.js', 'Steam'],
-    year: '2022 — 2024',
-    description:
-      'Self-shipped roguelike ARPG with procedural loot, deep affix systems, and tier-based progression. Engineered the live combat engine, the loot generation math, and the tooling pipeline used to balance and iterate on hundreds of items and skills.',
-    outcomes: [
-      'Released on Steam — full production cycle from prototype to publish.',
-      'Built the procedural affix generator + balance audit scripts that gate item rolls against design tolerances.',
-    ],
+      'A full-stack Mythic+ team-building platform for World of Warcraft. A React 18 front end (React Query, Tailwind) on a Node/Express API backed by Supabase PostgreSQL with row-level security and real-time subscriptions. AI matchmaking scores players across five compatibility factors — role coverage, Mythic+ rating, experience, schedule, and item level — from live Raider.io data, with Discord and Battle.net OAuth.',
     links: [
-      { label: 'Steam page', href: 'https://store.steampowered.com/app/4450160/Spire_of_Ash/' },
+      { label: 'GitHub', href: 'https://github.com/aaronlilla/FiveStack' },
     ],
   },
   {
@@ -64,17 +75,6 @@ export const projects: Project[] = [
       'Designed a security-hardened Electron architecture: context isolation, sandboxed renderer, explicit subprocess arg arrays (no shell interpolation), strict CSP.',
       'Implemented signal fusion — audio z-scores + scene cuts + transcript keywords merge into per-second timeline events with tunable detection profiles.',
       'Dual-transport MCP server enables Claude Code to import VODs, rerun analysis, and export clips without touching the UI.',
-    ],
-  },
-  {
-    name: 'FiveStack',
-    type: 'Web App · Team-Matching + Raider.io API',
-    stack: ['JavaScript', 'React', 'Node.js', 'Raider.io API'],
-    year: '2024 — present',
-    description:
-      'Mythic+ team-building platform for World of Warcraft players. AI-assisted matchmaking pairs players against Raider.io profile data — score, role coverage, experience, and run history — to build consistent, climbable teams. Integrates with the Raider.io API for live character data.',
-    links: [
-      { label: 'GitHub', href: 'https://github.com/aaronlilla/FiveStack' },
     ],
   },
   {

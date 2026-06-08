@@ -5,7 +5,7 @@ export function CaseStudies() {
   return (
     <Section
       id="case-studies"
-      label="Case Studies"
+      label="Deep-Dives"
       accent="purple"
       title="Three engineering deep-dives."
     >

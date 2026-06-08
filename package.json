@@ -10,7 +10,10 @@
     "preview": "vite preview --host",
     "typecheck": "tsc -b --noEmit",
     "visual": "node scripts/visual-check.mjs",
-    "visual:dev": "URL=http://localhost:5173 node scripts/visual-check.mjs"
+    "visual:dev": "URL=http://localhost:5173 node scripts/visual-check.mjs",
+    "resume": "node scripts/generate-resume.mjs",
+    "cover": "node scripts/generate-cover-letter.mjs",
+    "og": "node scripts/make-og-image.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -21,6 +24,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
+    "docx": "^9.7.1",
     "playwright": "^1.59.1",
     "postcss": "^8.4.49",
     "sharp": "^0.34.5",

@@ -32,16 +32,25 @@ export function Hero() {
             <p className="text-2xl sm:text-3xl md:text-[2.1rem] leading-[1.25] text-crt-text text-pretty">
               Thirteen years shipping React, TypeScript, Node, and Electron.
               Lead engineer on <em className="not-italic crt-bloom-amber">TableCaptain</em>
-              {' '}— 30+ poker rooms, 450+ concurrent in-venue displays over a
-              single WebSocket fabric. Shipped <em className="not-italic crt-bloom-amber">Spire of Ash</em>{' '}
-              on Steam. Currently building <em className="not-italic crt-bloom-amber">Holoscene</em>{' '}
+              {' '}— deployed in 30+ poker rooms across the U.S. and Asia.
+              Shipped <em className="not-italic crt-bloom-amber">Spire of Ash</em> on Steam.
+              Currently building <em className="not-italic crt-bloom-amber">Holoscene</em>{' '}
               with an AI-integrated tooling pipeline.
             </p>
 
-            <nav aria-label="Hero" className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-base">
+            <nav aria-label="Hero" className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-base">
               <a href="#work" className="link-underline crt-bloom">Selected work</a>
               <a href="/resume.html" className="link-underline crt-bloom-amber">Résumé</a>
               <a href="#contact" className="link-underline crt-bloom">Get in touch</a>
+              <a
+                href="/Aaron_Lilla_Resume.pdf"
+                download
+                aria-label="Download résumé as a PDF"
+                className="inline-flex items-center gap-2 rounded-sm border border-crt-amber/45 px-3.5 py-1.5 text-crt-amber crt-bloom-amber transition-colors duration-150 hover:border-crt-amber hover:bg-crt-amber/10 focus-visible:bg-crt-amber/10"
+              >
+                <span aria-hidden="true">↓</span>
+                Download PDF
+              </a>
             </nav>
           </div>
         </div>
