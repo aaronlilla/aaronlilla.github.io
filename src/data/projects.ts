@@ -2,7 +2,7 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
-    name: 'Holoscene',
+    name: 'Nolve',
     type: 'Game · In Development · Studio + Engine',
     stack: ['TypeScript', 'React', 'Node.js', 'Vite', 'C#', '.NET', 'Godot', 'MCP', 'Claude API'],
     year: '2025 — present',
@@ -74,7 +74,8 @@ export const projects: Project[] = [
     outcomes: [
       'Designed a security-hardened Electron architecture: context isolation, sandboxed renderer, explicit subprocess arg arrays (no shell interpolation), strict CSP.',
       'Implemented signal fusion — audio z-scores + scene cuts + transcript keywords merge into per-second timeline events with tunable detection profiles.',
-      'Dual-transport MCP server enables Claude Code to import VODs, rerun analysis, and export clips without touching the UI.',
+      'Built a precision/recall/nDCG eval harness that scores detection quality against hand-labeled "golden" events.',
+      'Dual-transport MCP server (SHA-256-hashed rotatable bearer tokens, ~25 tools) enables Claude Code to import VODs, rerun analysis, and export clips without touching the UI.',
     ],
   },
   {

@@ -1,11 +1,11 @@
-**Topic:** TS↔C# combat parity validation in Holoscene
+**Topic:** TS↔C# combat parity validation in Nolve
 **Audience:** Senior engineers, systems folks, anyone who's lived through cross-language drift
 **Screenshot prompt:** A side-by-side diff or a Monte Carlo distribution plot from the validator showing <0.5% drift across 1,000 seeds. Even a terminal output of the parity check will do.
 **Optimal post day:** Tuesday or Wednesday morning Pacific
 
 ---
 
-Holoscene's combat math has to run in two languages.
+Nolve's combat math has to run in two languages.
 
 TypeScript in the studio (so balance designers can iterate in seconds).
 C# in Unity (so the player actually feels the simulation).

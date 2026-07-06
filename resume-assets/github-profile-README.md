@@ -8,8 +8,8 @@
 Thirteen years shipping React, TypeScript, Node.js, and Electron.
 
 - 🛠 **Lead engineer on TableCaptain** — a React + Electron platform deployed in **30+ poker rooms** across the U.S. and Asia. Built the real-time WebSocket TV display system driving 15+ synchronized screens per venue. (At PokerAtlas, 2019–2025.) **[Video walkthroughs →](https://aaronlilla.github.io/#work)**
-- 🎮 **Founder of [Afterimage Studio](https://aaronlilla.github.io)** — my indie game studio. Shipped [Spire of Ash](https://store.steampowered.com/app/4450160/Spire_of_Ash/) on Steam (roguelike ARPG, engine to publish).
-- 🧠 **Currently building [Holoscene](https://aaronlilla.github.io)** under the studio — a deterministic combat engine, TS↔C# parity validation across 1,000 Monte Carlo seeds, and a Claude-integrated balance simulator exposed via the Model Context Protocol.
+- 🎮 **Founder of [Dockyard](https://aaronlilla.github.io)** (dockyard.studio) — my indie game studio. Shipped [Spire of Ash](https://store.steampowered.com/app/4450160/Spire_of_Ash/) on Steam (roguelike ARPG, engine to publish).
+- 🧠 **Currently building [Nolve](https://aaronlilla.github.io)** under the studio — a deterministic combat engine, TS↔C# parity validation across 1,000 Monte Carlo seeds, and a Claude-integrated balance simulator exposed via the Model Context Protocol.
 
 ### Open to remote, full-stack roles
 

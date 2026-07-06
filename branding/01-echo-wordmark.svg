@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="Afterimage Studio">
-  <title>Afterimage Studio — Echo Wordmark</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="Dockyard">
+  <title>Dockyard — Echo Wordmark</title>
 
   <defs>
     <style><![CDATA[
@@ -18,9 +18,9 @@
   <rect class="bg" width="800" height="280"/>
 
   <!-- Three layers: faintest ghost, soft echo, sharp wordmark -->
-  <text class="word echo-2" x="64" y="156" dx="14">Afterimage</text>
-  <text class="word echo-1" x="62" y="153" dx="7">Afterimage</text>
-  <text class="word"        x="60" y="150">Afterimage</text>
+  <text class="word echo-2" x="64" y="156" dx="14">Dockyard</text>
+  <text class="word echo-1" x="62" y="153" dx="7">Dockyard</text>
+  <text class="word"        x="60" y="150">Dockyard</text>
 
   <!-- subtitle -->
   <text class="sub" x="62" y="200">STUDIO</text>

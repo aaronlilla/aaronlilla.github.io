@@ -1,96 +1,95 @@
 # Aaron Lilla
 
-**Full-Stack Software Engineer** | React, TypeScript, Node.js, Electron
+**Senior Front-End Engineer, Full-Stack & AI-Assisted Development** — React · TypeScript · Next.js · Node.js · LLM Tooling (Claude API, Claude Code, MCP) · Electron · Real-time Systems · CI/CD
 
-Las Vegas, NV (Remote) | [aaronjlilla@gmail.com](mailto:aaronjlilla@gmail.com) | [aaronlilla.github.io](https://aaronlilla.github.io) | [github.com/aaronlilla](https://github.com/aaronlilla) | [linkedin.com/in/aaronlilla](https://www.linkedin.com/in/aaronlilla)
+Las Vegas, NV (Remote) · [(702) 964-5163](tel:+17029645163) · [aaronjlilla@gmail.com](mailto:aaronjlilla@gmail.com) · [linkedin.com/in/aaronlilla](https://www.linkedin.com/in/aaronlilla) · [github.com/aaronlilla](https://github.com/aaronlilla) · [aaronlilla.github.io](https://aaronlilla.github.io)
+
+*Authorized to work in the U.S. (no sponsorship required) · Native English speaker*
 
 ---
 
 ## Summary
 
-Full-stack software engineer with **13 years of web development experience** and 8+ years deep in modern JavaScript. Lead front-end engineer on **TableCaptain**, a React and Electron platform deployed in **30+ poker rooms** across the U.S. and Asia, orchestrating **450+ concurrent in-venue displays** over a single WebSocket fabric. Founder of **Afterimage Studio**, with **Spire of Ash** shipped on Steam and Holoscene in development. Production AI tooling experience: multi-agent build pipelines, MCP-based agent integration, deterministic TypeScript-to-C# parity validation across approximately 48,000 lines of code.
-
----
+Senior front-end engineer with 13+ years building production web applications — 8+ of them deep in React, TypeScript, and Node.js. Six years as Senior Front-End Engineer on TableCaptain (PokerAtlas), architecting the real-time WebSocket layer behind 450+ concurrent displays in 30+ casino poker rooms. Concurrent senior front-end / AI-LLM contract work training and evaluating LLMs (Mercor Intelligence, DataAnnotation), a shipped Claude-API Discord bot, and an AI-agent build pipeline (Claude Code, MCP) as founder of indie studio Dockyard. Seeking a full-time senior or staff front-end / full-stack role centered on production ownership and AI-assisted engineering.
 
 ## Skills
 
-- **Languages:** TypeScript, JavaScript (ES2024), Node.js, C# (.NET), HTML5, CSS3
-- **Frontend:** React, Redux, Tailwind CSS, Vite, Design Systems, Accessibility (WCAG), Figma to React
-- **Backend:** Node.js, REST APIs, WebSockets, PostgreSQL, SQLite, Schema Design, Auth and Sessions
-- **Desktop and Real-time:** Electron (IPC, preload, auto-update, native subprocess), Real-time sync, Optimistic UI and reconciliation
-- **Architecture and Practice:** System Design, Scalable Architecture, Code Review, Mentoring, Agile, Scrum
-- **AI and Tooling:** Claude API, MCP (Model Context Protocol), Multi-agent pipelines, LLM streaming, Prompt engineering, AI-assisted development
-- **Testing and DevOps:** Playwright, Vitest, Jest, CI/CD, Visual regression, Performance profiling, Git
-
----
+- **Frontend:** React, Redux, Next.js, TypeScript, Tailwind CSS, Vite, Three.js, Design Systems, Responsive UI, Accessibility (WCAG), Figma to React
+- **Backend & Real-time:** Node.js, Express, REST APIs, WebSockets, Supabase, PostgreSQL, SQLite, Electron, IPC, Electron Preload Scripts, Electron Auto-Update, Auth & Sessions, OAuth
+- **AI & LLM Development:** LLM (Large Language Model) Training & Evaluation, Claude API, Claude Code (Agentic CLI), MCP (Model Context Protocol), Prompt Engineering, AI Code Review & Defect Detection, RLHF (Reinforcement Learning from Human Feedback) / Data Annotation, Multi-agent / Agentic Pipelines
+- **Languages:** JavaScript (ES2024), C# (.NET), HTML5, CSS3, SQL
+- **Architecture & Practice:** System Design, Scalable Architecture, Deterministic Simulation, Code Review, Mentoring, Agile / Scrum
+- **Testing & DevOps:** Vitest, Jest, Playwright, CI/CD, Visual Regression, Performance Profiling, Git
 
 ## Experience
 
-### Founder, Lead Engineer - Afterimage Studio (Holoscene, in development)
-**2025 - Present** | Remote
+### Senior Front-End Engineer — PokerAtlas
+**2019 - 2025** · Las Vegas, NV (Hybrid)
 
-Building an indie game studio end-to-end. Engine, runtime, content pipeline, custom tooling, and an MCP-integrated balance simulator that lets AI agents prototype and validate changes in-process.
+Led front-end development of TableCaptain, a React and Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia. Video walkthroughs of the Floor Editor, Table Manager, Waitlist, and in-venue TV display at aaronlilla.github.io.
 
-- Architected a deterministic combat engine in C# (approximately 48,000 lines of code) with a TypeScript reference spec; Monte Carlo parity gate rejects drift above 0.5% across 1,000 seeds.
-- Designed a multi-agent build pipeline coordinating 7+ specialized Claude Code agents (combat runtime, balance validator, data exporter, mode implementor, cross-mode validator) shipping coordinated changes across 6 game modes against a frozen invariant contract, with zero merge conflicts to date.
-- Engineered an Ability Priority Language (APL) evaluator and a 36-mechanic dispatch system supporting 36 hero archetypes with 14 aura patterns, resolving cross-character passive synergies deterministically per simulation tick.
-- Built a TypeScript-to-Unity data pipeline that exports versioned ScriptableObject `.asset` files plus JSON sidecars from a single TypeScript source of truth, eliminating data-shape drift between studio and engine.
+- Architected the real-time WebSocket sync layer - 450+ concurrent displays (15+ per venue across 30+ venues) with sub-second latency - and scaled TableCaptain V2 to the #1 poker room management system by adoption in 2024 (per company assessment).
+- Solo-designed and shipped the TableCaptain OTR Kiosk, a self-service camera-QR check-in app (React 19, real-time WebSocket) deployed on-premises at several large Las Vegas casino poker rooms including the Venetian, through 57 commits and 15+ versioned releases backed by a ~300-test automated suite.
+- Engineered core features end-to-end (floor editor, table manager, waitlist, employee manager, in-venue display HUD with optimistic UI) integrated with a .NET backend over WebSockets.
+- Automated the Electron auto-update and CI/CD pipeline (bi-weekly releases, sub-10-minute hotfixes, zero major downtime across six years) and led the TypeScript and Redux migration, mentoring engineers and translating Figma mockups into reusable design-system components.
 
-**Stack:** Unity, C#, TypeScript, Node.js, MCP, Claude API, PlayFab, Addressables
+**Technologies:** React, Redux, Electron, WebSockets, .NET (integration), Webpack, Vite, Vitest, CI/CD, Figma
 
-### Frontend Engineer - PokerAtlas (TableCaptain)
-**2019 - 2025** | Las Vegas, NV (Hybrid)
+### Founder and Lead Engineer — Dockyard (dockyard.studio)
+**2022 - Present** · Remote
 
-Led front-end development of TableCaptain, a React and Electron poker room management platform adopted in 30+ rooms across the U.S. and Asia, orchestrating 450+ concurrent in-venue displays over a single WebSocket fabric. **Video walkthroughs of Floor Editor, Table Manager, Waitlist, Auto Updater, and the in-venue TV display: [aaronlilla.github.io](https://aaronlilla.github.io/#work).**
+Indie game studio: shipped Spire of Ash (a commercial roguelite ARPG) end-to-end on Steam in 2022-2024, and building Nolve (a buildcraft ARPG, in development since 2025) on a deterministic C#/.NET engine with an AI-agent development pipeline.
 
-- Scaled TableCaptain V2 to a market-leading position by adoption in 2024 (per company assessment), serving 30+ active poker rooms.
-- Architected the real-time WebSocket sync layer: 450+ concurrent displays (15+ per venue across 30+ venues) with sub-second update latency across variable venue network conditions.
-- Engineered core features end-to-end: floor editor, table manager, waitlist, employee manager, and a real-time in-venue display HUD with optimistic UI and server-confirmed reconciliation.
-- Automated Electron auto-update and CI/CD pipeline with staged rollout and rollback; bi-weekly releases with hotfixes deployable in under 10 minutes, with zero major downtime incidents across 6 years of production.
-- Led TypeScript and Redux migration across the codebase; mentored junior engineers and introduced code-review practices adopted across the team.
-- Translated Figma mockups into pixel-perfect, responsive React components and reusable design-system primitives.
+- Nolve (2025-present): built a TypeScript + React design studio as the single source of truth - a deterministic combat simulator with content authoring for 100 characters, 500 skills, and 2,000+ items - with a Monte Carlo parity harness holding the C#/.NET engine within 0.5% of the TypeScript reference across 1,000 seeded runs, driven by a multi-agent Claude Code build pipeline (combat runtime, balance validator, data exporter, mode implementor, cross-mode validator) with an MCP-driven dashboard.
+- Spire of Ash (2022-2024): self-published a commercial roguelite ARPG end-to-end on Steam (~74,000 lines of TypeScript, 600+ tests) across 20+ releases (Steamworks, electron-builder, staged auto-update, Sentry, Chinese localization), with a Three.js/Pixi.js 3D client, a Supabase cloud backend with real-time leaderboards, and procedural systems (a 442-affix generator, 988 collectible cards) gated by Monte Carlo balance audits.
 
-**Stack:** React, Redux, Electron, WebSockets, .NET (integration), Webpack, CI/CD, Figma, Agile
+**Technologies:** TypeScript, React, Node.js, C#, .NET, Godot, Electron, Three.js, Pixi.js, Redux, Supabase, Steamworks, MCP, Claude Code, Vite, Vitest, Playwright
 
-### Founder, Lead Engineer - Afterimage Studio (Spire of Ash, shipped on Steam)
-**2022 - 2024** | Remote
+### Senior Front-End Engineer & AI/LLM Developer (Contract) — Mercor Intelligence & DataAnnotation
+**2024 - Present** · Remote
 
-Shipped a roguelike ARPG on Steam end-to-end: engine, content tooling, loot math, and the build pipeline.
+Concurrent senior front-end and AI/LLM development contract work with two vetted-expert AI-training marketplaces that route engineers into RLHF pipelines for frontier AI labs (Mercor's clients include OpenAI and Anthropic) - building production React applications from LLM-processed prompts, training models to flag UX and code defects, and evaluating AI-generated front-end code for correctness and production readiness.
 
-- Self-shipped on [Steam](https://store.steampowered.com/app/4450160/Spire_of_Ash/): full production cycle from prototype to publish.
-- Built the procedural affix generator and audit scripts that gate item rolls against design tolerances; the loot math pipeline informs current Holoscene combat parity work.
-- Patterns proven here became the foundation of the Holoscene engine and tooling.
+- Mercor Intelligence (Mar-Nov 2025, 8-month contract): built production-quality React applications from LLM-processed prompts as a Senior Front-End Engineer, structuring code as canonical teaching examples so models could learn and replicate optimal component architecture, and trained models to automatically flag critical UX defects.
+- DataAnnotation (2024-present): serve as a senior front-end / AI-LLM developer on its software-engineering review track, building and evaluating React and Node code for correctness and production-readiness (logic errors, race conditions, inefficient implementations) and producing structured feedback used in RLHF model fine-tuning.
 
-**Stack:** Unity, C#, TypeScript, Node.js, Steam
+**Technologies:** React, TypeScript, Node.js, LLM Training & Evaluation, RLHF, Prompt Engineering
 
-### Frontend Developer - USCRE Online
-**2017 - 2019** | Las Vegas, NV (Hybrid)
+### Frontend Developer — USCRE Online
+**2017 - 2019** · Las Vegas, NV (Hybrid)
 
 Built a single-page React app delivering real-time commercial real estate data for 5,000+ properties.
 
-- Cut quote retrieval time by 50% via Redux-driven caching, request deduplication, and database query optimization on the search path.
-- Shipped a 20-component reusable library, dropping front-end bug rate by approximately 40% over 6 months.
-- Drove load time under 1.2s; lifted Core Web Vitals into the green and improved organic search ranking.
+- Cut quote retrieval time by 50% via Redux-driven caching, request deduplication, and search-path query optimization.
+- Shipped a 20-component reusable UI library (~40% fewer front-end bugs in six months) and drove load time under 1.2s into green Core Web Vitals.
 
-**Stack:** React, Redux, JavaScript, HTML5, CSS3
+**Technologies:** React, Redux, JavaScript, HTML5, CSS3
 
-### Freelance Web Developer - Self-Employed (concurrent with salaried roles)
-**2012 - Present** | Remote
+### Operations Manager - Extraction & Compliance Systems — Evergreen Organix
+**2014 - 2016** · Nevada
 
-Landing pages, custom dashboards, Discord bots, and small SaaS tools.
+Operations Manager for a licensed cannabis processing facility (2014-2016), overseeing CO2 extraction operations and seed-to-sale compliance systems between web development roles.
 
----
+- Administered the Metrc seed-to-sale compliance system (plant tagging, inventory tracking, packaging workflows) to meet state regulatory requirements.
+- Built and tuned CO2 critical extraction processes and packaging-line SOPs, supervising staff and troubleshooting production and compliance-software issues under regulatory deadlines.
+
+**Technologies:** Metrc, Systems Administration, Regulatory Compliance, Operations Management
+
+### Web Developer & Graphic Designer — IMPACT International Marketing
+**2012 - 2013** · Lake Havasu City, AZ
+
+First professional web development and design role, building marketing websites and graphic design assets for local and regional clients.
+
+- Designed and built marketing websites and landing pages (HTML, CSS, JavaScript) and produced print and digital graphic design assets - branding, ads, marketing collateral - for regional clients.
+
+**Technologies:** HTML, CSS, JavaScript, Graphic Design, Adobe Creative Suite
 
 ## Projects
 
-**Clippa** (Electron, MCP, SQLite, ffmpeg) - Local-first Electron app that detects highlight moments in long-form video. Multi-stage media pipeline on a SQLite-backed job queue. Exposes a dual-transport MCP server (HTTP and stdio, bearer-token auth) so external agents can drive the entire workflow programmatically.
+**Discord AI Chatbot** *(Node.js · discord.js · Claude API · Streaming LLM)* — Discord bot that streams LLM responses token-by-token in real time via the Claude API (OpenAI-configurable), with per-channel system prompts and conversation memory. github.com/aaronlilla/discord-ai-chatbot
 
-**FiveStack** (React, Node.js, Raider.io API) - Mythic+ team-building platform with AI-assisted matchmaking. [github.com/aaronlilla/FiveStack](https://github.com/aaronlilla/FiveStack)
-
-**Discord AI Chatbot** (Node.js, discord.js, streaming LLM) - Discord bot that streams LLM responses token-by-token in real time. [github.com/aaronlilla/discord-ai-chatbot](https://github.com/aaronlilla/discord-ai-chatbot)
-
----
+**Clippa** *(Electron · React · MCP · ffmpeg · SQLite)* — Local-first Electron app that finds highlight moments in long-form video for clip export via a multi-stage pipeline (yt-dlp ingest, audio/scene-cut fusion) on a SQLite job queue with crash recovery, scored by a precision/recall/nDCG eval harness. Exposes a dual-transport MCP server (~25 tools) for external agents to drive the whole workflow.
 
 ## Education
 
-College of Southern Nevada, Las Vegas, NV
+**College of Southern Nevada** — Organic Chemistry coursework, Las Vegas, NV

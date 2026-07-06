@@ -26,6 +26,6 @@ I recorded narrated walkthroughs of each major surface — Floor Editor, Table M
 
 ## Author
 
-[Aaron Lilla](https://aaronlilla.github.io) — full-stack engineer. Led TableCaptain V2 at PokerAtlas (2019–2025). Now founding [Afterimage Studio](https://aaronlilla.github.io).
+[Aaron Lilla](https://aaronlilla.github.io) — senior front-end engineer. Led TableCaptain V2 at PokerAtlas (2019–2025). Now founding [Dockyard](https://aaronlilla.github.io).
 
 [Résumé](https://aaronlilla.github.io/resume.html) · [LinkedIn](https://www.linkedin.com/in/aaronlilla) · [Email](mailto:aaronjlilla@gmail.com)

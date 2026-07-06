@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="Afterimage Studio">
-  <title>Afterimage Studio — Scanline Wordmark</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" role="img" aria-label="Dockyard">
+  <title>Dockyard — Scanline Wordmark</title>
 
   <defs>
     <style><![CDATA[
@@ -25,7 +25,7 @@
   <line class="scan"       x1="40" y1="158" x2="760" y2="158"/>
   <line class="scan-faint" x1="40" y1="168" x2="760" y2="168"/>
 
-  <text class="word" x="56" y="158">Afterimage</text>
+  <text class="word" x="56" y="158">Dockyard</text>
 
   <text class="sub" x="60" y="208">— S T U D I O —</text>
 </svg>

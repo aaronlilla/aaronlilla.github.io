@@ -17,7 +17,7 @@ Drafts and supporting files for the 2026 job search. Not part of the site build 
    - TableCaptain2 (or Casino-Waitlist)
    - aaronlilladotcom (once it's public — set the existing site repo public)
    - SpireOfAsh (or SpireOfAshRelease — whichever has the better README)
-3. **Set your GitHub bio:** `Full-stack engineer — React, TypeScript, Node, Electron. Built TableCaptain (30+ venues). Founder of Afterimage Studio (Spire of Ash on Steam, Holoscene in dev).`
+3. **Set your GitHub bio:** `Senior front-end engineer — React, TypeScript, Node, Electron, AI/LLM development. Built TableCaptain (30+ venues). Founder of Dockyard (Spire of Ash on Steam, Nolve in dev).`
 4. **Add to GitHub profile location:** `Las Vegas, NV (Remote)`
 5. **Add website:** `https://aaronlilla.github.io`
 6. **Hide/archive noise repos** — the `TC_*` and `DungeonGame*` variants clutter the profile. Archive any that aren't actively useful.
@@ -26,7 +26,7 @@ Drafts and supporting files for the 2026 job search. Not part of the site build 
 
 1. **Headline** — change from `Frontend Developer | React & Node.js Expert | 13 Years Web Dev | AI-Enhanced Productivity | Electron, TypeScript, Redux` to:
 
-   > `Full-Stack Software Engineer · React, TypeScript, Node, Electron · 13 yrs · Built TableCaptain (30+ venues) · Founder of Afterimage Studio (Spire of Ash on Steam) · AI/MCP tooling`
+   > `Senior Front-End Engineer · Full-Stack & AI-Assisted Development · React, TypeScript, Node, Electron · 13+ yrs · Built TableCaptain (30+ venues) · Founder of Dockyard (Spire of Ash on Steam) · AI/MCP tooling`
 
 2. **About** — paste the Summary section from `/RESUME.md` verbatim.
 

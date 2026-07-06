@@ -7,7 +7,7 @@ Three drafts tuned to different role types. **Read once, then customize per comp
 | File | Use when | Anchor |
 |---|---|---|
 | `01-generic-senior-ic.md` | Generic full-stack IC role at a product company | TableCaptain V2 #1-by-adoption result |
-| `02-ai-devtools.md` | Companies hiring for AI integration, dev tools, MCP, agent infra | Holoscene MCP + multi-agent pipeline |
+| `02-ai-devtools.md` | Companies hiring for AI integration, dev tools, MCP, agent infra | Nolve MCP + multi-agent pipeline |
 | `03-realtime-infra.md` | Real-time, streaming, multi-screen, or 24/7-uptime products | TableCaptain real-time sync at 30+ venues |
 
 ## Universal customization checklist

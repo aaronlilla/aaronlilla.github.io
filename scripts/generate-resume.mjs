@@ -3,11 +3,14 @@
 //   node scripts/generate-resume.mjs        (or: npm run resume)
 //
 // Outputs (all regenerated, never hand-edited):
-//   public/resume.html              — viewable page + the source Chromium prints to PDF
-//   public/Aaron_Lilla_Resume.pdf   — text-based, ATS-extractable (Playwright page.pdf)
-//   public/Aaron_Lilla_Resume.docx  — single-column, ATS-clean Word doc
-//   public/resume.txt               — ASCII plain text for paste-into-form fields
-//   RESUME.md                       — kept in sync for the repo
+//   public/resume.html                       — viewable page + the source Chromium prints to PDF
+//   public/Aaron_Lilla_Resume.pdf             — text-based, ATS-extractable (Playwright page.pdf)
+//   public/Aaron_Lilla_Resume.docx            — single-column, ATS-clean Word doc
+//   public/resume.txt                         — ASCII plain text for paste-into-form fields
+//   RESUME.md                                 — kept in sync for the repo
+//   resume-assets/Aaron_Lilla_Resume.pdf      — mirror copy for the job-search asset folder
+//   resume-assets/Aaron_Lilla_Resume.docx     — mirror copy for the job-search asset folder
+//   resume-assets/Aaron_Lilla_Resume.txt      — mirror copy for the job-search asset folder
 //
 // Why a pipeline: HTML/PDF/DOCX/TXT used to be hand-synced and drifted. One
 // source means they can never disagree, and retargeting is a single edit + run.
@@ -17,7 +20,7 @@ import {
   Document, Packer, Paragraph, TextRun, ExternalHyperlink,
   AlignmentType, BorderStyle, LevelFormat,
 } from 'docx';
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, copyFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -25,13 +28,21 @@ import { resume } from './resume-data.mjs';
 
 const ROOT = resolve(dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
 const PUBLIC = join(ROOT, 'public');
+const ASSETS = join(ROOT, 'resume-assets');
 const HTML_PATH = join(PUBLIC, 'resume.html');
 const PDF_PATH = join(PUBLIC, 'Aaron_Lilla_Resume.pdf');
 const DOCX_PATH = join(PUBLIC, 'Aaron_Lilla_Resume.docx');
 const TXT_PATH = join(PUBLIC, 'resume.txt');
 const MD_PATH = join(ROOT, 'RESUME.md');
+const ASSETS_PDF_PATH = join(ASSETS, 'Aaron_Lilla_Resume.pdf');
+const ASSETS_DOCX_PATH = join(ASSETS, 'Aaron_Lilla_Resume.docx');
+const ASSETS_TXT_PATH = join(ASSETS, 'Aaron_Lilla_Resume.txt');
 
 const ACCENT = 'B8531A';
+// Metadata face for the DOCX: Consolas ships with Office on both Windows and
+// Mac, so dates/tech-stacks/labels render consistently without embedding —
+// mirrors the Inter/JetBrains Mono split used in the HTML/PDF.
+const MONO = 'Consolas';
 const log = (...a) => console.log('▸', ...a);
 
 // ── helpers ────────────────────────────────────────────────────────────────
@@ -116,11 +127,16 @@ function buildHtml(r) {
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
-
   <style>
+    /* Self-hosted static weights — no CDN dependency at generation or view time,
+       and static (non-variable) files avoid the Type3 bitmap fallback some
+       PDF engines fall back to when embedding variable web fonts. */
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/inter-400.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/inter-600.woff2') format('woff2'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/inter-700.woff2') format('woff2'); }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('fonts/jetbrains-mono-500.woff2') format('woff2'); }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/jetbrains-mono-600.woff2') format('woff2'); }
+
     :root {
       --bg: #f6f4ee;
       --paper: #ffffff;
@@ -195,13 +211,19 @@ function buildHtml(r) {
       font-weight: 600;
       letter-spacing: 0.01em;
     }
+    /* Metadata face: dates, locations, tech tags, and section labels read as
+       data, not prose — set in JetBrains Mono with wide tracking, mirroring
+       the .crt-label treatment used site-wide on aaronlilla.github.io. */
     .kw {
-      font-size: 9pt;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5pt;
+      letter-spacing: 0.02em;
       color: var(--ink-3);
       margin: 0;
     }
     .contact {
-      font-size: 9pt;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5pt;
       color: var(--ink-3);
       margin: 0 0 3px 0;
       line-height: 1.55;
@@ -218,10 +240,11 @@ function buildHtml(r) {
     }
 
     h2 {
-      font-size: 11pt;
-      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10pt;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       color: var(--accent);
       margin: 16px 0 8px 0;
       padding-bottom: 4px;
@@ -233,41 +256,47 @@ function buildHtml(r) {
     .role { margin-bottom: 13px; }
     .role-head, .role-subhead { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
     .role-title { font-weight: 700; font-size: 11pt; color: var(--ink); margin: 0; }
-    .role-dates { font-size: 9.5pt; color: var(--ink-3); margin: 0; white-space: nowrap; }
+    .role-dates { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: var(--ink-3); margin: 0; white-space: nowrap; }
     .role-org { font-weight: 600; color: var(--ink-2); margin: 0; }
-    .role-where { font-size: 9.5pt; color: var(--ink-3); margin: 0; white-space: nowrap; }
+    .role-where { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: var(--ink-3); margin: 0; white-space: nowrap; }
     .role-summary { margin: 3px 0 4px 0; color: var(--ink-2); }
     ul.bullets { margin: 4px 0 4px 0; padding-left: 18px; }
     ul.bullets li { margin-bottom: 2px; }
-    .stack { font-size: 9.5pt; color: var(--ink-3); margin-top: 4px; }
-    .stack-label { color: var(--accent); font-weight: 700; margin-right: 4px; }
+    .stack { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: var(--ink-3); margin-top: 4px; }
+    .stack-label { color: var(--accent); font-weight: 600; margin-right: 4px; }
 
     .project { margin-bottom: 9px; }
     .project-title { font-weight: 700; color: var(--ink); margin: 0; }
-    .project-stack { font-size: 9.5pt; color: var(--ink-3); margin: 0 0 2px 0; }
+    .project-stack { font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: var(--ink-3); margin: 0 0 2px 0; }
     .project-desc { color: var(--ink-2); margin: 2px 0 0 0; }
 
     .skills p { margin: 0 0 4px 0; color: var(--ink-2); }
-    .skills .label { color: var(--accent); font-weight: 700; margin-right: 4px; }
+    .skills .label { font-family: 'JetBrains Mono', monospace; font-size: 0.92em; color: var(--accent); font-weight: 600; margin-right: 4px; }
 
     .education { color: var(--ink-2); }
 
     @media print {
       .toolbar { display: none; }
-      body { background: #fff; font-size: 10pt; line-height: 1.28; }
+      body { background: #fff; font-size: 9.5pt; line-height: 1.2; }
       .page { margin: 0; max-width: none; padding: 0; box-shadow: none; }
-      h2 { margin: 11px 0 5px 0; break-after: avoid; }
-      .summary { line-height: 1.38; margin: 3px 0 4px 0; }
-      .role { margin-bottom: 7px; }
-      .role-summary { margin: 3px 0 3px 0; }
-      ul.bullets { margin: 3px 0 3px 0; }
-      ul.bullets li { margin-bottom: 1px; }
-      .stack { margin-top: 3px; }
-      .project { margin-bottom: 6px; }
+      h1 { font-size: 21pt; }
+      .role-line { margin: 0 0 3px 0; }
+      .contact { line-height: 1.3; }
+      header { padding-bottom: 4px; margin-bottom: 0; }
+      h2 { margin: 7px 0 4px 0; break-after: avoid; }
+      .summary { line-height: 1.28; margin: 2px 0 3px 0; }
+      .role { margin-bottom: 4px; }
+      .role-summary { margin: 2px 0 2px 0; }
+      ul.bullets { margin: 2px 0 2px 0; }
+      ul.bullets li { margin-bottom: 0; }
+      .stack { margin-top: 2px; }
+      .project { margin-bottom: 3px; }
+      .project-desc { line-height: 1.28; }
+      .skills p { margin: 0 0 2px 0; }
       a { color: var(--ink); }
     }
 
-    @page { size: letter; margin: 0.36in 0.5in; }
+    @page { size: letter; margin: 0.24in 0.45in; }
   </style>
 </head>
 <body>
@@ -349,7 +378,8 @@ function buildText(r) {
     L.push('');
     L.push(e.title);
     L.push(e.org);
-    L.push(`${ascii(e.dates)} | ${e.location}`);
+    L.push(`Dates: ${ascii(e.dates)}`);
+    L.push(`Location: ${ascii(e.location)}`);
     L.push('');
     L.push(ascii(e.summary));
     if (e.bullets.length) {
@@ -439,7 +469,7 @@ function docHeading(text) {
     spacing: { before: 220, after: 90 },
     border: { bottom: { color: ACCENT, style: BorderStyle.SINGLE, size: 6, space: 2 } },
     children: [
-      new TextRun({ text: text.toUpperCase(), bold: true, color: ACCENT, size: 22 }),
+      new TextRun({ text: text.toUpperCase(), bold: true, color: ACCENT, size: 22, font: MONO }),
     ],
   });
 }
@@ -471,26 +501,32 @@ function buildDocx(r) {
   children.push(
     new Paragraph({
       spacing: { after: 60 },
-      children: [new TextRun({ text: r.keywords, size: 18, color: '555C69' })],
+      children: [new TextRun({ text: r.keywords, size: 17, color: '555C69', font: MONO })],
     }),
   );
-  // Contact line (real hyperlinks + visible text)
-  const contactRuns = [new TextRun({ text: r.location + '  |  ', size: 18, color: '555C69' })];
+  // Contact line — Phone/Email as plain text (regex-based ATS contact-field
+  // extraction is more reliable against unlinked plain text); LinkedIn/GitHub/
+  // Website stay real hyperlinks. Mono, mirroring the HTML/PDF metadata face.
+  const contactRuns = [new TextRun({ text: r.location + '  |  ', size: 17, color: '555C69', font: MONO })];
   r.contact.forEach((c, i) => {
-    contactRuns.push(
-      new ExternalHyperlink({
-        link: c.href,
-        children: [new TextRun({ text: c.text, size: 18, color: '2A2F3A', underline: {} })],
-      }),
-    );
-    if (i < r.contact.length - 1) contactRuns.push(new TextRun({ text: '  |  ', size: 18, color: '555C69' }));
+    if (c.label === 'Phone' || c.label === 'Email') {
+      contactRuns.push(new TextRun({ text: c.text, size: 17, color: '2A2F3A', font: MONO }));
+    } else {
+      contactRuns.push(
+        new ExternalHyperlink({
+          link: c.href,
+          children: [new TextRun({ text: c.text, size: 17, color: '2A2F3A', underline: {}, font: MONO })],
+        }),
+      );
+    }
+    if (i < r.contact.length - 1) contactRuns.push(new TextRun({ text: '  |  ', size: 17, color: '555C69', font: MONO }));
   });
   children.push(new Paragraph({ spacing: { after: r.eligibility ? 20 : 60 }, children: contactRuns }));
   if (r.eligibility) {
     children.push(
       new Paragraph({
         spacing: { after: 80 },
-        children: [new TextRun({ text: r.eligibility, size: 18, color: '555C69' })],
+        children: [new TextRun({ text: r.eligibility, size: 17, color: '555C69', font: MONO })],
       }),
     );
   }
@@ -506,7 +542,7 @@ function buildDocx(r) {
       new Paragraph({
         spacing: { after: 30 },
         children: [
-          new TextRun({ text: `${s.label}: `, bold: true, size: 20, color: ACCENT }),
+          new TextRun({ text: `${s.label}: `, bold: true, size: 19, color: ACCENT, font: MONO }),
           new TextRun({ text: s.items, size: 20 }),
         ],
       }),
@@ -530,8 +566,20 @@ function buildDocx(r) {
     );
     children.push(
       new Paragraph({
+        spacing: { after: 0 },
+        children: [
+          new TextRun({ text: 'Dates: ', bold: true, size: 17, color: ACCENT, font: MONO }),
+          new TextRun({ text: e.dates, size: 17, color: '555C69', font: MONO }),
+        ],
+      }),
+    );
+    children.push(
+      new Paragraph({
         spacing: { after: 40 },
-        children: [new TextRun({ text: `${e.dates}  |  ${e.location}`, italics: true, size: 18, color: '555C69' })],
+        children: [
+          new TextRun({ text: 'Location: ', bold: true, size: 17, color: ACCENT, font: MONO }),
+          new TextRun({ text: e.location, size: 17, color: '555C69', font: MONO }),
+        ],
       }),
     );
     children.push(new Paragraph({ spacing: { after: 40 }, children: [new TextRun({ text: e.summary, size: 20 })] }));
@@ -541,8 +589,8 @@ function buildDocx(r) {
         new Paragraph({
           spacing: { before: 30, after: 40 },
           children: [
-            new TextRun({ text: 'Technologies: ', bold: true, size: 18, color: ACCENT }),
-            new TextRun({ text: e.stack, size: 18, color: '555C69' }),
+            new TextRun({ text: 'Technologies: ', bold: true, size: 17, color: ACCENT, font: MONO }),
+            new TextRun({ text: e.stack, size: 17, color: '555C69', font: MONO }),
           ],
         }),
       );
@@ -557,7 +605,7 @@ function buildDocx(r) {
         spacing: { before: 80, after: 0 },
         children: [
           new TextRun({ text: p.name, bold: true, size: 20 }),
-          new TextRun({ text: `  (${p.stack})`, size: 18, color: '555C69' }),
+          new TextRun({ text: `  (${p.stack})`, size: 17, color: '555C69', font: MONO }),
         ],
       }),
     );
@@ -618,24 +666,30 @@ function buildDocx(r) {
 async function main() {
   if (!existsSync(PUBLIC)) await mkdir(PUBLIC, { recursive: true });
 
-  // ASCII-normalize once; every format renders from the clean data.
-  const R = asciifyDeep(resume);
+  // Two variants: R_HTML keeps real typography (middle dots, en-dashes) for the
+  // human-facing web page/PDF — modern text-layer PDF extraction (2026-era
+  // parsers) handles UTF-8 fine, so this only affects how it looks, not how it
+  // parses. R_SAFE is ASCII-normalized for TXT (paste-into-form fields) and
+  // DOCX (the most format-sensitive, lowest-common-denominator upload target),
+  // so those two stay maximally compatible with the oldest/strictest parsers.
+  const R_HTML = resume;
+  const R_SAFE = asciifyDeep(resume);
 
   // 1) HTML
-  const html = buildHtml(R);
+  const html = buildHtml(R_HTML);
   await writeFile(HTML_PATH, html, 'utf8');
   log(`HTML  → ${HTML_PATH}`);
 
   // 2) TXT
-  await writeFile(TXT_PATH, buildText(R), 'utf8');
+  await writeFile(TXT_PATH, buildText(R_SAFE), 'utf8');
   log(`TXT   → ${TXT_PATH}`);
 
-  // 3) Markdown
-  await writeFile(MD_PATH, buildMarkdown(R), 'utf8');
+  // 3) Markdown (repo doc, not an ATS upload target — nice typography is fine)
+  await writeFile(MD_PATH, buildMarkdown(R_HTML), 'utf8');
   log(`MD    → ${MD_PATH}`);
 
   // 4) DOCX
-  const docBuffer = await Packer.toBuffer(buildDocx(R));
+  const docBuffer = await Packer.toBuffer(buildDocx(R_SAFE));
   await writeFile(DOCX_PATH, docBuffer);
   log(`DOCX  → ${DOCX_PATH}`);
 
@@ -658,6 +712,17 @@ async function main() {
     await browser.close();
   }
   log(`PDF   → ${PDF_PATH}`);
+
+  // 6) Mirror PDF/DOCX/TXT into resume-assets/ so the job-search folder never
+  // drifts from what actually ships on the site.
+  if (!existsSync(ASSETS)) await mkdir(ASSETS, { recursive: true });
+  await copyFile(PDF_PATH, ASSETS_PDF_PATH);
+  await copyFile(DOCX_PATH, ASSETS_DOCX_PATH);
+  await copyFile(TXT_PATH, ASSETS_TXT_PATH);
+  log(`ASSETS → ${ASSETS_PDF_PATH}`);
+  log(`ASSETS → ${ASSETS_DOCX_PATH}`);
+  log(`ASSETS → ${ASSETS_TXT_PATH}`);
+
   log('done.');
 }
 

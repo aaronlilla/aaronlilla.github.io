@@ -28,9 +28,9 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'deterministic-combat-sim',
     title: 'Deterministic combat at <0.5% drift across 1,000 seeds',
-    tagline: 'How Holoscene runs the same fight twice and gets the same answer — in two languages.',
+    tagline: 'How Nolve runs the same fight twice and gets the same answer — in two languages.',
     context:
-      "Holoscene's combat is a deep, stat-heavy ARPG simulation: 100 characters, 500 skills, procedural affixes, multi-character passive synergies, and an ability-priority language that resolves into per-tick damage events. The math is authored in TypeScript so it can run in the studio's design tools; it ships in C# inside the Godot game engine for production.",
+      "Nolve's combat is a deep, stat-heavy ARPG simulation: 100 characters, 500 skills, procedural affixes, multi-character passive synergies, and an ability-priority language that resolves into per-tick damage events. The math is authored in TypeScript so it can run in the studio's design tools; it ships in C# inside the Godot game engine for production.",
     problem:
       "Two implementations of the same combat math is a recipe for silent drift. A 0.3% rounding difference compounds across a thousand ticks into wildly different fight outcomes — which means design balance done in the studio doesn't match what players actually see in the game.",
     solution:

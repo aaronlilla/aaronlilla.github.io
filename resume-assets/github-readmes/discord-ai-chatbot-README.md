@@ -42,4 +42,4 @@ Streaming responses are the difference between *feels like a tool* and *feels li
 
 ## Author
 
-[Aaron Lilla](https://aaronlilla.github.io) — full-stack engineer. Building [Holoscene](https://aaronlilla.github.io); previously shipped [Spire of Ash on Steam](https://store.steampowered.com/app/4450160/Spire_of_Ash/).
+[Aaron Lilla](https://aaronlilla.github.io) — senior front-end engineer. Building [Nolve](https://aaronlilla.github.io); previously shipped [Spire of Ash on Steam](https://store.steampowered.com/app/4450160/Spire_of_Ash/).

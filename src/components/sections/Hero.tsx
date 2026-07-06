@@ -10,7 +10,7 @@ export function Hero() {
     >
       <div className="mx-auto w-full max-w-5xl px-6 sm:px-10 py-16 sm:py-24">
         <h1 id="hero-heading" className="sr-only">
-          Aaron Lilla — Full-stack software engineer
+          Aaron Lilla — Senior front-end engineer, full-stack &amp; AI-assisted development
         </h1>
 
         <div className="grid items-center gap-10 sm:gap-14 md:grid-cols-[5fr_6fr] md:gap-16">
@@ -27,14 +27,17 @@ export function Hero() {
           </div>
 
           <div className="order-2 md:order-2">
-            <p className="crt-label mb-5">Aaron Lilla · Full-Stack Engineer</p>
+            <p className="crt-label mb-5">Aaron Lilla · Senior Front-End Engineer · AI-Assisted Development</p>
 
             <p className="text-2xl sm:text-3xl md:text-[2.1rem] leading-[1.25] text-crt-text text-pretty">
-              Thirteen years shipping React, TypeScript, Node, and Electron.
-              Lead engineer on <em className="not-italic crt-bloom-amber">TableCaptain</em>
+              Thirteen-plus years shipping React, TypeScript, Node, and Electron —
+              now heavily focused on AI-assisted and LLM-driven development.
+              Senior front-end engineer on <em className="not-italic crt-bloom-amber">TableCaptain</em>
               {' '}— deployed in 30+ poker rooms across the U.S. and Asia.
+              Trained LLMs on production React code at{' '}
+              <em className="not-italic crt-bloom-amber">Mercor Intelligence</em>.
               Shipped <em className="not-italic crt-bloom-amber">Spire of Ash</em> on Steam.
-              Currently building <em className="not-italic crt-bloom-amber">Holoscene</em>{' '}
+              Currently building <em className="not-italic crt-bloom-amber">Nolve</em>{' '}
               with an AI-integrated tooling pipeline.
             </p>
 

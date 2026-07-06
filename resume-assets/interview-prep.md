@@ -45,7 +45,7 @@ For each, follow Situation → Task → Action → Result. **Practice these out 
 - **S:** Shipping an indie game alone on Steam — Spire of Ash. Engine, content, store integration, the works.
 - **T:** I gave myself 18 months from prototype to publish; the actual deadline was self-imposed.
 - **A:** I scoped aggressively — picked one genre, one set of mechanics, refused feature creep. Built the procedural affix system, the loot math audit scripts, the build pipeline, and the store page. Every Sunday I shipped a build.
-- **R:** Shipped on Steam in the planned window. The patterns I proved out (deterministic sims, audit-script gates, weekly cadence) became the foundation for Holoscene.
+- **R:** Shipped on Steam in the planned window. The patterns I proved out (deterministic sims, audit-script gates, weekly cadence) became the foundation for Nolve.
 
 ### 3. "Tell me about a time you handled conflict / disagreement on a team."
 
@@ -63,14 +63,14 @@ For each, follow Situation → Task → Action → Result. **Practice these out 
 
 ### 5. "Tell me about a time you had to learn something quickly."
 
-- **S:** When I started on Holoscene, I'd never seriously used C# or Unity. The combat engine had to run there.
+- **S:** When I started on Nolve, I'd never seriously used C# or Unity. The combat engine had to run there.
 - **T:** Port the TypeScript combat math to C# without drift.
 - **A:** Treated the port as a parity problem, not a rewrite. Wrote a Monte Carlo validator first — 1,000 seeds, comparing TypeScript and C# output. Then ported the math piece by piece, letting the validator tell me when I'd diverged. Picked up C# idioms in the process: properties, generics, struct vs class semantics, all driven by failing tests.
 - **R:** <0.5% drift across 1,000 seeds. The validator gates every combat change now.
 
 ### 6. "Tell me about a time you had ambiguity / no clear spec."
 
-- **S:** Holoscene's multi-agent build pipeline. There's no playbook for "coordinate 7+ specialized AI agents on a long-running codebase port."
+- **S:** Nolve's multi-agent build pipeline. There's no playbook for "coordinate 7+ specialized AI agents on a long-running codebase port."
 - **T:** Figure out an architecture that scales without humans being a bottleneck for every micro-decision.
 - **A:** I defaulted to the same pattern that works for microservices: frozen contracts at module boundaries, surgical scope per agent, read-only verifier agents that can veto but not edit. Wrote the orchestrator as the only agent allowed to write to a `.bus/` lockfile. Iterated on the rules every week based on what was actually shipping.
 - **R:** Coordinated changes flow without merge conflicts. New agents can be added without restructuring the fleet. Same instincts I'd use scaling a backend microservice mesh.
@@ -96,7 +96,7 @@ The big rule for senior-IC system design: **clarify requirements before drawing 
 | **Design a leaderboard / ranking system at scale** | Game-adjacent + classic system design | Write path (batched ingest + sorted set in Redis), read path (cached tiers), pagination strategy |
 | **Design a video clip processor (Twitch-style highlights)** | Direct Clippa analog | Multi-stage pipeline, job queue with idempotent stages, asset-store separation, signal fusion for detection |
 | **Design a desktop app that exposes an API to external agents** | Direct MCP analog | Local-only transport, auth, contract-versioning, shared job queue for UI + API |
-| **Design a content / data pipeline (TS → engine)** | Direct Holoscene exporter analog | Single source of truth, versioned schema, validation gate, idempotent re-runs |
+| **Design a content / data pipeline (TS → engine)** | Direct Nolve exporter analog | Single source of truth, versioned schema, validation gate, idempotent re-runs |
 | **Design a CI/CD system for desktop apps** | TableCaptain auto-update analog | Build matrix, staged rollout by tier, version pinning, rollback model |
 
 ### Frameworks to keep in your back pocket
@@ -136,7 +136,7 @@ You'll see one of these:
 | Framing | Default story |
 |---|---|
 | "Tell me about your work." | 60-second pitch above |
-| "Why are you leaving / why now?" | Holoscene is fascinating but I want team work + a steady mission. Holoscene continues on evenings. |
+| "Why are you leaving / why now?" | Nolve is fascinating but I want team work + a steady mission. Nolve continues on evenings. |
 | "Why this company?" | One specific thing — a blog post, a product decision, a hire. **Always specific.** |
 | "What are you looking for in a role?" | Senior IC ownership, modern stack (React/TS/Node), remote, team that ships and iterates. |
 | "Strengths?" | Real-time + desktop + AI-tooling fluency. The third one is rare. |

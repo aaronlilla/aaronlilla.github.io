@@ -5,7 +5,7 @@
 
 ---
 
-For Holoscene's port from a TypeScript studio to a Unity engine, I'm not driving Claude as a single agent. I'm driving a *fleet*.
+For Nolve's port from a TypeScript studio to a Unity engine, I'm not driving Claude as a single agent. I'm driving a *fleet*.
 
 Seven+ specialized agents, each owning a slice of the codebase:
 

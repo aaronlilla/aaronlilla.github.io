@@ -14,7 +14,7 @@ The challenges sound familiar to anyone shipping real-time:
 
 TableCaptain V2 became the #1 poker room management system by adoption in 2024. I have video walkthroughs of each subsystem — Floor Editor, Table Manager, Waitlist, the in-venue TV display, the Auto Updater — at [aaronlilla.github.io/#work](https://aaronlilla.github.io/#work), since the source itself is proprietary.
 
-For broader context: I also founded **Afterimage Studio**, my indie game studio, which shipped [Spire of Ash](https://store.steampowered.com/app/4450160/Spire_of_Ash/) on Steam. The current project, Holoscene, runs on a deterministic combat engine with AI-integrated tooling.
+For broader context: I also founded **Dockyard**, my indie game studio, which shipped [Spire of Ash](https://store.steampowered.com/app/4450160/Spire_of_Ash/) on Steam. The current project, Nolve, runs on a deterministic combat engine with AI-integrated tooling.
 
 If [COMPANY] is hiring for the kind of real-time work you can't fake, I'd love a 20 minutes to talk.
 
